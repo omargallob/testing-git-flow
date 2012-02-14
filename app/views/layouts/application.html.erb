@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <%= stylesheet_link_tag 'blueprint/screen',"application" %>
+  	<%= stylesheet_link_tag 'blueprint/print', :media => "print" %>
+    <!--[if lt IE8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif] -->
+		<%= javascript_include_tag "application" %>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="home" class="container">
+			<header>
+				<nav>
+					<%= render_navigation %>
+				</nav>
+			</header>
+			<section id="main" style="width:90%;">
+	      <% flash.each do |name, msg| %>
+	        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+	      <% end %>
+				<%= content_tag :h1, yield(:title) if show_title? %>				
+      	<%= yield %>
+			</section>
+			<footer>
+				Copyright <%= Date.today.strftime("%Y") %>
+			</footer>
+    </div>
+  </body>
+</html>

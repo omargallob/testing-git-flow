@@ -2,7 +2,16 @@ Skeleton::Application.routes.draw do
 
 
 
+
+
+
+
+
   namespace "admin" do
+    resources :partners    
+    resources :staffs
+    resources :posts
+    resources :categories
     resources :pages do 
       resources :albums
     end

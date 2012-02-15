@@ -33,31 +33,41 @@
           <b><%= t("activerecord.attributes.admin_album.category_id", :default => t("activerecord.labels.category_id", :default => "Category")) %>:</b>
           <%= @album.category_id %>
         </p>
-				<h1>Uploads</h1>
-				<ul style="list-style:none;width:100%;float:left;">
-					<% @album.uploads.delete_if{|x|x.image_url.blank?}.each do |u|%>
-					<li style="float:left;margin-right:10px;"><%= image_tag u.image_url, :height =>100 %> <br><%= link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), admin_album_upload_path(@album,u), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %></li>
-					<% end %>
-				</ul>
-					<h1>Add an upload</h1>
-
+				<h1 style="border-bottom:1px solid black;padding-top:20px;">Album Options</h1>
+	      <div class="wat-cf">
+	        <%= link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_admin_album_path(@album), :class => "button" %> 
+	        <%= link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), admin_album_path(@album), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+	      </div>
+				<h1 style="border-bottom:1px solid black;padding-top:20px;">Uploads</h1>
+				<div id="gallery" style="width:100%;float:left;">
+					<ul class="list">
+						<%= render :partial => "upload", :collection => @album.uploads.delete_if{|x|x.image_url.blank?} %>
+					</ul>
+				</div>
+					<h1 style="border-bottom:1px solid black;padding-top:20px;width:100%;float:left;">Add an upload</h1>
+					<div style="width:450px;">
 					 <%= form_for([:admin,@album,@upload], :html => { :class => :form, :multipart => true }) do |f| -%>
 			        <%= render :partial => "upload_fields", :locals => {:f => f} %>
 							<div class="group navform wat-cf">
 							  <button class="button" type="submit">
-							    <%= image_tag("web-app-theme/icons/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}") %> <%= t("web-app-theme.save", :default => "Save") %>
+							    <%= image_tag("web-app-theme/icons/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}") %> <%= t("web-app-theme.save", :default => "Upload") %>
 							  </button>
 							  <span class="text_button_padding"><%= t("web-app-theme.or", :default => "or") %></span>
 								<%= link_to t("web-app-theme.cancel", :default => "Cancel"), admin_albums_path, :class => "text_button_padding link_button" %>
 							</div> 
 			     <% end -%>
-			
-      <div class="wat-cf">
-        <%= link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_admin_album_path(@album), :class => "button" %> 
-        <%= link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), admin_album_path(@album), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
-      </div>      
+				</div>
+   
     </div>
   </div>
 </div>
 
 <% content_for :sidebar, render(:partial => 'sidebar') -%>
+
+<% content_for(:scripts) do %>
+<script type="text/javascript">
+$(function() {
+	$('#gallery a').colorbox();
+});
+</script>
+<% end %>

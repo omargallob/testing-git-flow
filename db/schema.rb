@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120214181045) do
+ActiveRecord::Schema.define(:version => 20120215144433) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
@@ -21,6 +21,17 @@ ActiveRecord::Schema.define(:version => 20120214181045) do
     t.integer  "category_id"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.string   "title"
+    t.string   "navlabel"
+    t.integer  "parent_id"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "position"
   end
 
   create_table "metatags", :force => true do |t|
@@ -43,6 +54,46 @@ ActiveRecord::Schema.define(:version => 20120214181045) do
     t.integer  "position"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "partners", :force => true do |t|
+    t.string   "name"
+    t.string   "website"
+    t.string   "twitter"
+    t.text     "bio"
+    t.string   "industry"
+    t.integer  "position"
+    t.datetime "parnter_since"
+    t.string   "logo"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "name"
+    t.string   "title"
+    t.integer  "category_id"
+    t.text     "body"
+    t.boolean  "published"
+    t.datetime "published_on"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.string   "image"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "staffs", :force => true do |t|
+    t.string   "name"
+    t.string   "surname"
+    t.string   "twitter"
+    t.text     "bio"
+    t.string   "role"
+    t.integer  "position"
+    t.datetime "started_on"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "image"
   end
 
   create_table "uploads", :force => true do |t|

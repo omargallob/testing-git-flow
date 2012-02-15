@@ -1,0 +1,19 @@
+ <tr class="<%= cycle("odd", "even") %>">
+    <td>
+      <%= post.id %>
+    </td>
+              <td>
+      <%= link_to post.name, admin_post_path(post) %>
+    </td>
+    <td>
+	      <%= post.category.parent.title %> - <%= post.category.title %>
+    </td>  
+  	<td>
+      <%= post.published_on.strftime("%d-%m-%Y") %>
+    </td>
+    <td class="last">
+      <%= link_to "#{t("web-app-theme.show", :default => "Show")}", admin_post_path(post) %> |
+      <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_admin_post_path(post) %> |
+      <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", admin_post_path(post), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+    </td>
+  </tr>

@@ -17,7 +17,7 @@
 					<%= render_navigation %>
 				</nav>
 			</header>
-			<section id="main" style="width:90%;">
+			<section id="main">
 	      <% flash.each do |name, msg| %>
 	        <%= content_tag :div, msg, :id => "flash_#{name}" %>
 	      <% end %>
@@ -25,7 +25,7 @@
       	<%= yield %>
 			</section>
 			<footer>
-				Copyright <%= Date.today.strftime("%Y") %>
+				Feature Rich Ltd. Copyright <%= Date.today.strftime("%Y") %>
 			</footer>
     </div>
   </body>

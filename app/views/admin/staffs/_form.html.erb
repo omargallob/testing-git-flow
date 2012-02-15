@@ -1,0 +1,51 @@
+
+  <div class="group">
+      <%= f.input :name, :label => t("activerecord.attributes.staff.name", :default => "Name"), :label_html => {:class=>"label"}, :input_html => {:class => 'text_field validate[required]'}%>
+    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+		  <%= f.input :surname, :label => t("activerecord.attributes.staff.surname", :default => "Surname"), :label_html => {:class=>"label"}, :input_html => {:class => 'text_field validate[required]'}%>
+	    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+  	 <%= f.input :twitter, :label => t("activerecord.attributes.staff.twitter", :default => "Twitter"), :label_html => {:class=>"label"}, :input_html => {:class => 'text_field validate[required]'}%>
+	   
+    <span class="description">Ex: username</span>
+  </div>
+
+  <div class="group">
+ 		<%= f.input :bio,:as => :text, :label => t("activerecord.attributes.staff.bio", :default => "Bio"), :label_html => {:class=>"label"}, :input_html => {:class => 'text_area validate[required]'}%>
+  <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+		<%= f.input :role, :label => t("activerecord.attributes.staff.role", :default => "Role"), :label_html => {:class=>"label"}, :input_html => {:class => 'text_field'}%>
+    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+    <%= f.label :position, t("activerecord.attributes.staff.position", :default => "Position"), :class => :label %>
+    <%= f.select :position,1..20, :class => 'number_field validate[required]' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+    <%= f.label :started_on, t("activerecord.attributes.staff.started_on", :default => "Started on"), :class => :label %>
+    <%= f.date_select :started_on, :class => 'datetime_select validate[required]' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+ <div class="group">
+		<%= f.input :image,:as => :file, :label => t("activerecord.attributes.staff.bio", :default => "Bio"), :label_html => {:class=>"label"}, :input_html => {:class => 'file_field'}%> 
+
+    <span class="description">Ex: Portrait.jpg</span>
+  </div>
+        
+<div class="group navform wat-cf">
+  <button class="button" type="submit">
+    <%= image_tag("web-app-theme/icons/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}") %> <%= t("web-app-theme.save", :default => "Save") %>
+  </button>
+  <span class="text_button_padding"><%= t("web-app-theme.or", :default => "or") %></span>
+	<%= link_to t("web-app-theme.cancel", :default => "Cancel"), admin_staffs_path, :class => "text_button_padding link_button" %>
+</div>

@@ -16,3 +16,14 @@
 </div>
 
 <% content_for :sidebar, render(:partial => 'sidebar') -%>
+
+
+
+<% content_for(:scripts) do %>
+<script type="text/javascript">
+	$(function() {
+		//alert("fck yeah");
+		$(".form").validationEngine();
+	});
+</script>
+<% end %>

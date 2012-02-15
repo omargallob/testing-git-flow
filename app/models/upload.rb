@@ -3,6 +3,8 @@ class Upload < ActiveRecord::Base
   attr_accessible :title, :description, :photo,:crop_x,:crop_y, :crop_h, :crop_w,:album_id, :image, :position
   mount_uploader :image, ImageUploader
   belongs_to :album
+  
+  validates_presence_of :title, :image
   # attr_accessor  :crop_x, :crop_y, :crop_h, :crop_w
   #   after_update :reprocess_image, :if => :cropping?
   # 

@@ -1,0 +1,63 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+      <li class="first"><%= link_to "#{t("web-app-theme.list", :default => "List")}", admin_posts_path  %></li>
+      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_admin_post_path %></li>
+      <li class="active"><%= link_to "#{t("web-app-theme.show", :default => "Show")}", admin_post_path %></li>
+    </ul>
+  </div>          
+  <div class="content">
+    <div class="inner">
+      
+    
+      <%= image_tag @post.image_url, :height => "100", :style=>"margin-top:15px;" %>
+        <p>
+          <b><%= t("activerecord.attributes.admin_post.name", :default => t("activerecord.labels.name", :default => "Name")) %>:</b>
+          <%= @post.name %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_post.title", :default => t("activerecord.labels.title", :default => "Title")) %>:</b>
+          <%= @post.title %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_post.category_id", :default => t("activerecord.labels.category_id", :default => "Category")) %>:</b>
+          <%= @post.category.parent.title %> - <%= @post.category.title %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_post.body", :default => t("activerecord.labels.body", :default => "Body")) %>:</b>
+          <%= @post.body %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_post.published", :default => t("activerecord.labels.published", :default => "Published")) %>:</b>
+          <%= @post.published %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_post.published_on", :default => t("activerecord.labels.published_on", :default => "Published on")) %>:</b>
+          <%= @post.published_on.strftime("%d-%m-%Y") %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_post.start_at", :default => t("activerecord.labels.start_at", :default => "Start at")) %>:</b>
+          <%= @post.start_at %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_post.end_at", :default => t("activerecord.labels.end_at", :default => "End at")) %>:</b>
+          <%= @post.end_at %>
+        </p>
+
+        
+      <div class="wat-cf">
+        <%= link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_admin_post_path(@post), :class => "button" %> 
+        <%= link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), admin_post_path(@post), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+      </div>      
+    </div>
+  </div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'sidebar') -%>

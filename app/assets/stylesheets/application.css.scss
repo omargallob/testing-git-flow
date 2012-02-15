@@ -9,6 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require colorbox/colorbox
+ *= require validation/validationEngine
  *= require_tree .
 */
 @import "compass/css3";
@@ -53,15 +55,23 @@ body{
 				20px;
 			background:
 				#fafafa;
+			float:
+				left;
+			width:
+				910px;
 			border:
 				1px solid #aaaaaa;
 			@include border-radius(10px, 10px);									
 		}
 		footer{
 			padding:
-				10px;
+				10px 5px;
+			width:
+				940px;
 			background:
 				#fafafa;
+			float:
+				left;
 			border:
 				1px solid #aaaaaa;
 			margin-top:

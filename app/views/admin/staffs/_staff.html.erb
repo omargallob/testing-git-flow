@@ -1,0 +1,16 @@
+<tr class="<%= cycle("odd", "even") %>">
+  <td>
+    <%= staff.id %>
+  </td>
+            <td>
+    <%= link_to staff.name, admin_staff_path(staff) %>
+  </td>
+            <td>
+    <%= staff.created_at %>
+  </td>
+  <td class="last">
+    <%= link_to "#{t("web-app-theme.show", :default => "Show")}", admin_staff_path(staff) %> |
+    <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_admin_staff_path(staff) %> |
+    <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", admin_staff_path(staff), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+  </td>
+</tr>

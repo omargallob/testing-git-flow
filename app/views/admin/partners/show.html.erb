@@ -8,7 +8,7 @@
   </div>          
   <div class="content">
     <div class="inner">
-      
+        <%= image_tag @partner.logo, :style=>"margin-top:15px" %>
         <p>
           <b><%= t("activerecord.attributes.admin_partner.name", :default => t("activerecord.labels.name", :default => "Name")) %>:</b>
           <%= @partner.name %>
@@ -44,10 +44,8 @@
           <%= @partner.parnter_since %>
         </p>
 
-        <p>
-          <b><%= t("activerecord.attributes.admin_partner.logo", :default => t("activerecord.labels.logo", :default => "Logo")) %>:</b>
-          <%= @partner.logo %>
-        </p>
+ 
+       
       <div class="wat-cf">
         <%= link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_admin_partner_path(@partner), :class => "button" %> 
         <%= link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), admin_partner_path(@partner), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>

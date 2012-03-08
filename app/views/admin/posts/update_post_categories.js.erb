@@ -1,0 +1,23 @@
+//alert("<%= @category.subcategories.count %>");
+
+<% unless @category.title == "Posts" %>
+$("#post_category_id").html('<%= escape_javascript(options_for_select(@subcategories.map{|x| [" - #{x.title}", x.id]})).html_safe %>');
+
+	<% if @category.parent.present? and @category.parent.parent.blank?  %>
+	//
+		$("#post_category_id").append("<option value='<%= @category.parent_id %>'>Back</option>");
+		$("#post_category_id").prepend("<option disabled value='<%= @category.id %>'><%= @category.title %></option>");
+	<% elsif  @category.parent.present? and @category.parent.parent.present? and @category.parent.parent.parent.blank? # case its second level %>
+	//
+		$("#post_category_id option").attr("disabled","disabled");
+		$("#post_category_id").append("<option value='<%= @category.parent.id %>'>Back</option>");
+		$("#post_category_id").prepend("<option selected value='<%= @category.id %>'><%= @category.title %></option>");
+
+
+	<% end %>
+
+<% else %>
+$("#post_category_id").html('<%= escape_javascript(options_for_select(@subcategories.map{|x| [" #{x.title}", x.id]})).html_safe %>');
+
+$("#post_category_id").prepend("<option value=''>None Selected</option>");
+<% end %>

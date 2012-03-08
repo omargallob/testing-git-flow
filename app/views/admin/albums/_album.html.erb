@@ -5,12 +5,14 @@
                 <td>
         <%= link_to album.title, admin_album_path(album) %>
       </td><td><%= album.uploads.count %></td>
+<td><%= album.albumable_id %></td>
+<td><%= album.albumable_type %></td>
                 <td>
         <%= album.created_at %>
       </td>
       <td class="last">
-        <%= link_to "#{t("web-app-theme.show", :default => "Show")}", admin_album_path(album) %> |
-        <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_admin_album_path(album) %> |
-        <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", admin_album_path(album), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+        <%= link_to "#{t("web-app-theme.show", :default => "Show")}", polymorphic_url([:admin,@albumable,album]) %> |
+        <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_polymorphic_url([:admin,@albumable,album]) %> |
+        <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}",polymorphic_url([:admin,@albumable,album]), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
       </td>
     </tr>

@@ -83,4 +83,18 @@ class Admin::CategoriesController < Admin::BaseController
       format.json { head :no_content }
     end
   end
+  
+  def update_categories
+     unless params[:id].blank?
+       @category  = Category.find(params[:id])
+      # @category = @subcategory.parent
+       @subcategories = @category.subcategories   
+     else 
+        @category = nil
+        @subcategories = Category.find_main
+     end 
+     respond_to do |format|
+       format.js 
+     end   
+   end
 end

@@ -7,17 +7,31 @@ Skeleton::Application.routes.draw do
 
 
 
+  resources :contacts
+
   namespace "admin" do
     resources :partners    
     resources :staffs
-    resources :posts
+    resources :posts  do 
+      resources :albums
+    end
     resources :categories
+    
+
+    resources :products do 
+      resources :albums
+    end
+    resources :contacts
     resources :pages do 
       resources :albums
     end
     resources :albums do 
       resources :uploads
     end
+    match '/update_category' =>"categories#update_categories", :as => :update_categories
+    
+    match '/update_product_category' =>"products#update_product_categories", :as => :update_product_categories
+    match '/update_post_category' =>"posts#update_post_categories", :as => :update_post_categories
     root :to => "overview#index"
   end 
   root :to => 'home#index'

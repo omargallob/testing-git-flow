@@ -18,4 +18,5 @@ class Category < ActiveRecord::Base
    def self.find_all_sub
      Category.order("position").where('parent_id IS NOT ?', nil).all
    end
+
 end

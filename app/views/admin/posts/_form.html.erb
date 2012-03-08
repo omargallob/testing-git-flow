@@ -13,7 +13,7 @@
 
   <div class="group">
     <%= f.label :category_id, t("activerecord.attributes.post.category_id", :default => "Category"), :class => :label %>
-    <%= f.select(:category_id,Category.find_all_sub.map{|x|["#{x.parent.title} - #{x.title}",x.id]},{:include_blank => 'None Selected'}, :class => 'number_field') %>
+    <%= f.select(:category_id,Category.find_sub(6).map{|x|["#{x.title}",x.id]},{:include_blank => 'None Selected'}, :class => 'number_field') %>
   </div>
 
   <div class="group">
@@ -47,12 +47,9 @@
 
   <div class="group">
     <%= f.label :image, t("activerecord.attributes.post.image", :default => "Image"), :class => :label %>
-    <%= f.file_field :image, :class => 'file_field validate[required]' %>
+    <%= f.file_field :image, :class => '' %>
   </div>
-        <h1>Metatag</h1>
-				<%= f.simple_fields_for :metatag, @post.metatag do |builder| %>
-				 <%= render "shared/form/metatag_fields", :f => builder %>
-				<% end %>
+       
 <div class="group navform wat-cf">
   <button class="button" type="submit">
     <%= image_tag("web-app-theme/icons/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}") %> <%= t("web-app-theme.save", :default => "Save") %>

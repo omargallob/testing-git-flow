@@ -1,0 +1,30 @@
+//alert("<%= escape_javascript(options_for_select(@subcategories.map{|x| [x.title, x.id]})).html_safe %>");
+
+
+<% unless @category == nil %>
+$("#category_parent_id").html('<%= escape_javascript(options_for_select(@subcategories.map{|x| [" - #{x.title}", x.id]})).html_safe %>');
+
+	<% if @category.parent.blank? #case its a parent  %>
+	//
+		$("#category_parent_id").append("<option value=''>Back</option>");
+		$("#category_parent_id").prepend("<option selected value='<%= @category.id %>'><%= @category.title %></option>");
+	<% elsif @category.parent.present? and @category.parent.parent.blank? # case its second level %>
+	//
+		$("#category_parent_id option").attr("disabled","disabled");
+		$("#category_parent_id").append("<option value='<%= @category.parent.id %>'>Back</option>");
+		$("#category_parent_id").prepend("<option selected value='<%= @category.id %>'><%= @category.title %></option>");
+
+	<% elsif @category.parent.present? and @category.parent.parent.present? and @category.parent.parent.parent.blank? # case its third level %>
+	//
+		$("#category_parent_id").append("<option value='<%= @category.id %>'>Back</option>");
+	<% end %>
+
+<% else %>
+$("#category_parent_id").html('<%= escape_javascript(options_for_select(@subcategories.map{|x| [" #{x.title}", x.id]})).html_safe %>');
+
+$("#category_parent_id").prepend("<option selected value=''>None Selected</option>");
+<% end %>
+
+
+
+

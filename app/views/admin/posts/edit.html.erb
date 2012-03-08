@@ -22,6 +22,15 @@
 	$(function() {
 		//alert("fck yeah");
 		$(".form").validationEngine();
+		alert
+			<% if @post.category.present? %>
+			$("#post_category_id").html("<option selected value='<%= @post.category.id %>'><%= @post.category.title %></option>");
+			//
+			$("#post_category_id").append("<option value='<%= @post.category.parent.id %>'> Back  </option>");
+			<% end %>
+			$("#post_category_id").change(function() {
+				$.ajax({ type: 'POST', url: '<%= admin_update_post_categories_path %>', data: 'id='+this.value });
+			});
 	});
 </script>
 <% end %>

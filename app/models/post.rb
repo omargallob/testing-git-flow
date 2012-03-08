@@ -9,4 +9,6 @@ class Post < ActiveRecord::Base
   attr_accessible :metatag_attributes 
   attr_writer :metatag_attributes
   accepts_nested_attributes_for :metatag
+  
+  has_many :albums, :as => :albumable, :dependent => :destroy
 end

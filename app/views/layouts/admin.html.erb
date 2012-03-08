@@ -9,7 +9,7 @@
 <body>
   <div id="container">
     <div id="header">
-      <h1><a href="/admin">CMSv01 by Feature Rich</a></h1>
+      <h1><a href="/admin"><%= image_tag "CMS_logo.png", :id=>"logo" %></a></h1>
       <div id="user-navigation">
         <ul class="wat-cf">
           <li><a href="#"><%= t("web-app-theme.profile", :default => "Profile") %></a></li>
@@ -18,7 +18,7 @@
         </ul>
       </div>
       <div id="main-navigation">
-        <ul class="wat-cf"> <li class="<%= controller.controller_path == 'admin/pages' ? 'active' : '' %>"><a href="<%= admin_pages_path %>">Pages</a></li> <li class="<%= controller.controller_path == 'admin/albums' ? 'active' : '' %>"><a href="<%= admin_albums_path %>">Albums</a></li> <li class="<%= controller.controller_path == 'admin/categories' ? 'active' : '' %>"><a href="<%= admin_categories_path %>">Categories</a></li> <li class="<%= controller.controller_path == 'admin/posts' ? 'active' : '' %>"><a href="<%= admin_posts_path %>">Posts</a></li>  <li class="<%= controller.controller_path == 'admin/staffs' ? 'active' : '' %>"><a href="<%= admin_staffs_path %>">Staff</a></li> <li class="<%= controller.controller_path == 'admin/partners' ? 'active' : '' %>"><a href="<%= admin_partners_path %>">Partners</a></li></ul>
+        <ul class="wat-cf"> <li class="<%= controller.controller_path == 'admin/pages' ? 'active' : '' %>"><a href="<%= admin_pages_path %>">Pages</a></li> <li class="<%= controller.controller_path == 'admin/albums' ? 'active' : '' %>"><a href="<%= admin_albums_path %>">Albums</a></li> <li class="<%= controller.controller_path == 'admin/categories' ? 'active' : '' %>"><a href="<%= admin_categories_path %>">Categories</a></li> <li class="<%= controller.controller_path == 'admin/posts' ? 'active' : '' %>"><a href="<%= admin_posts_path %>">Posts</a></li>  <li class="<%= controller.controller_path == 'admin/staffs' ? 'active' : '' %>"><a href="<%= admin_staffs_path %>">Staff</a></li> <li class="<%= controller.controller_path == 'admin/partners' ? 'active' : '' %>"><a href="<%= admin_partners_path %>">Partners</a></li>  <li class="<%= controller.controller_path == 'admin/contacts' ? 'active' : '' %>"><a href="<%= admin_contacts_path %>">Contacts</a></li> <li class="<%= controller.controller_path == 'admin/products' ? 'active' : '' %>"><a href="<%= admin_products_path %>">Products</a></li></ul>
       </div>
     </div>    
     <div id="wrapper" class="wat-cf">

@@ -1,8 +1,8 @@
 <div class="block">
   <div class="secondary-navigation">
     <ul class="wat-cf">
-      <li class="first active"><%= link_to "#{t("web-app-theme.list", :default => "List")}", admin_albums_path  %></li>
-      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_admin_album_path %></li>
+      <li class="first active"><%= link_to "#{t("web-app-theme.list", :default => "List")}", polymorphic_url([:admin,@albumable,"albums"])  %></li>
+      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_polymorphic_url([:admin,@albumable,"album"]) %></li>
     </ul>
   </div>          
   <div class="content">          
@@ -14,7 +14,9 @@
                     <th>
             <%= t("activerecord.attributes.admin_album.title", :default => t("activerecord.labels.title", :default => "Title")) %>
           </th>
-					<th>Uploads</th>
+						<th>Uploads</th>
+						<th>Albumable id</th>
+						<th>Albumable Type</th>
                     <th><%= t("web-app-theme.created_at", :default => "Created at")  %></th>
           <th class="last">&nbsp;</th>
         </tr>

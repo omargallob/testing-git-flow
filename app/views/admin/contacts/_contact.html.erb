@@ -1,0 +1,16 @@
+  <tr class="<%= cycle("odd", "even") %>">
+    <td>
+      <%= contact.id %>
+    </td>
+              <td>
+      <%= link_to contact.name, admin_contact_path(contact) %>
+    </td>
+              <td>
+      <%= contact.created_at %>
+    </td>
+    <td class="last">
+      <%= link_to "#{t("web-app-theme.show", :default => "Show")}", admin_contact_path(contact) %> |
+   
+      <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", admin_contact_path(contact), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+    </td>
+  </tr>

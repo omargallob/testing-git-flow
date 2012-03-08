@@ -11,6 +11,7 @@ gem 'carrierwave'
 gem "nifty-generators"
 gem "simple_form"
 gem "simple-navigation"
+gem 'country_select'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

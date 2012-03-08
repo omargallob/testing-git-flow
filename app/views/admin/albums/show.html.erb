@@ -1,9 +1,9 @@
 <div class="block">
   <div class="secondary-navigation">
     <ul class="wat-cf">
-      <li class="first"><%= link_to "#{t("web-app-theme.list", :default => "List")}", admin_albums_path  %></li>
-      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_admin_album_path %></li>
-      <li class="active"><%= link_to "#{t("web-app-theme.show", :default => "Show")}", admin_album_path %></li>
+      <li class="first"><%= link_to "#{t("web-app-theme.list", :default => "List")}", polymorphic_url([:admin,@albumable,"albums"])  %></li>
+      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_polymorphic_url([:admin,@albumable,"album"]) %></li>
+      <li class="active"><%= link_to "#{t("web-app-theme.show", :default => "Show")}",polymorphic_url([:admin,@albumable,@album]) %></li>
     </ul>
   </div>          
   <div class="content">
@@ -35,8 +35,8 @@
         </p>
 				<h1 style="border-bottom:1px solid black;padding-top:20px;">Album Options</h1>
 	      <div class="wat-cf">
-	        <%= link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_admin_album_path(@album), :class => "button" %> 
-	        <%= link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), admin_album_path(@album), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+	        <%= link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_polymorphic_url([:admin,@albumable,@album]), :class => "button" %> 
+	        <%= link_to image_tag("web-app-theme/icons/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}") + " " + t("web-app-theme.delete", :default => "Delete"), polymorphic_url([:admin,@albumable,@album]), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
 	      </div>
 				<h1 style="border-bottom:1px solid black;padding-top:20px;">Uploads</h1>
 				<div id="gallery" style="width:100%;float:left;">
@@ -53,7 +53,7 @@
 							    <%= image_tag("web-app-theme/icons/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}") %> <%= t("web-app-theme.save", :default => "Upload") %>
 							  </button>
 							  <span class="text_button_padding"><%= t("web-app-theme.or", :default => "or") %></span>
-								<%= link_to t("web-app-theme.cancel", :default => "Cancel"), admin_albums_path, :class => "text_button_padding link_button" %>
+								<%= link_to t("web-app-theme.cancel", :default => "Cancel"), polymorphic_url([:admin,@albumable,"albums"]), :class => "text_button_padding link_button" %>
 							</div> 
 			     <% end -%>
 				</div>

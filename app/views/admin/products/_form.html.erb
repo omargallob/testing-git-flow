@@ -1,0 +1,34 @@
+
+  <div class="group">
+    <%= f.label :title, t("activerecord.attributes.product.title", :default => "Title"), :class => :label %>
+    <%= f.text_field :title, :class => 'text_field' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+	
+    <%= f.label :category_id, t("activerecord.attributes.product.category_id", :default => "Category"), :class => :label %>
+ 
+  	<%= f.select :category_id, Category.find_sub(7).map{|x|[" #{x.title}",x.id]},{:include_blank => 'None Selected'}, :class => 'number_field validate[required]' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+    <%= f.label :description, t("activerecord.attributes.product.description", :default => "Description"), :class => :label %>
+    <%= f.text_area :description, :class => 'text_area' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+    <%= f.label :tagline, t("activerecord.attributes.product.tagline", :default => "Tagline"), :class => :label %>
+    <%= f.text_field :tagline, :class => 'text_field' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+        
+<div class="group navform wat-cf">
+  <button class="button" type="submit">
+    <%= image_tag("web-app-theme/icons/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}") %> <%= t("web-app-theme.save", :default => "Save") %>
+  </button>
+  <span class="text_button_padding"><%= t("web-app-theme.or", :default => "or") %></span>
+	<%= link_to t("web-app-theme.cancel", :default => "Cancel"), admin_products_path, :class => "text_button_padding link_button" %>
+</div>

@@ -35,6 +35,8 @@ class Admin::PostsController < Admin::BaseController
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
+    @category = @post.category
+    
     if @post.metatag.blank?
       @metatag = @post.build_metatag      
     end
@@ -47,6 +49,7 @@ class Admin::PostsController < Admin::BaseController
 
     respond_to do |format|
       if @post.save
+        @post.albums.create(:title =>"First  Album for Post #{@post.id}")
         format.html { redirect_to admin_post_path(@post), notice: 'Post was successfully created.' }
         format.json { render json: @post, status: :created, location: @post }
       else
@@ -83,4 +86,18 @@ class Admin::PostsController < Admin::BaseController
       format.json { head :no_content }
     end
   end
+  
+  def update_post_categories
+      unless params[:id].blank?
+        @category  = Category.find(params[:id])
+       # @category = @subcategory.parent
+        @subcategories = @category.subcategories   
+      else 
+         @category = nil
+         @subcategories = Category.find_main
+      end 
+      respond_to do |format|
+        format.js 
+      end   
+    end
 end

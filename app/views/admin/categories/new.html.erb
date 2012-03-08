@@ -21,6 +21,10 @@
 	$(function() {
 		//alert("fck yeah");
 		$(".form").validationEngine();
+		$("#category_parent_id").change(function() {
+			$.ajax({ type: 'POST', url: '<%= admin_update_categories_path %>', data: 'id='+this.value });
+		});
 	});
 </script>
 <% end %>
+

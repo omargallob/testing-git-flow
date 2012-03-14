@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120308111735) do
+ActiveRecord::Schema.define(:version => 20120314115524) do
 
   create_table "albums", :force => true do |t|
     t.string   "title"
@@ -100,6 +100,7 @@ ActiveRecord::Schema.define(:version => 20120308111735) do
     t.string   "tagline"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.boolean  "published"
   end
 
   create_table "staffs", :force => true do |t|

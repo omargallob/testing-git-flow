@@ -1,0 +1,9 @@
+<div class="post">
+	<%= link_to(image_tag(post.albums.first.uploads.first.image_url(:thumb)), "#{post.id}",:class=>"post-link" ) %>
+	<div class="info-block">
+		<span><%= post.title %></span>
+	</div>
+	<div class="info-block">
+		<span><%= post.published_on.strftime("%d %B %y") %></span>
+	</div>
+</div>

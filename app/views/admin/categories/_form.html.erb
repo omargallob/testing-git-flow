@@ -28,6 +28,7 @@
     <%= f.text_area :description, :class => 'text_area validate[required]' %>
     <span class="description">Ex: a simple text</span>
   </div>
+
  <div class="group">
     <%= f.label :position, t("activerecord.attributes.page.position", :default => "Position"), :class => :label %>
     <%= f.select :position,1..20, :class => 'number_field' %>

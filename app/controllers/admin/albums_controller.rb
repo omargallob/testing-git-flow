@@ -40,7 +40,7 @@ class Admin::AlbumsController < Admin::BaseController
 
   # GET /albums/1/edit
   def edit
-        @albumable = find_albumable
+    @albumable = find_albumable
     @album = Album.find(params[:id])
   end
 

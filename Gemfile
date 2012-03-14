@@ -12,6 +12,8 @@ gem "nifty-generators"
 gem "simple_form"
 gem "simple-navigation"
 gem 'country_select'
+gem "meta-tags"
+#gem "minimagick"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

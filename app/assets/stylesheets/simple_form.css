@@ -90,7 +90,7 @@ width:100%;
 }
 .simple_form label {
   float: left;
-  width: 130px;
+  width: 100px;
   text-align: left;
   margin: 5px 10px;
 	font-size:15px;
@@ -104,6 +104,9 @@ width:100%;
   width: 178px;
   text-align: right;
   margin: 2px 10px 57px 10px;
+}
+.simple_form textarea{
+	width:280px;
 }
 .simple_form input[type='submit'] {
   margin-left: 148px;

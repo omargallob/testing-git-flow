@@ -28,7 +28,7 @@ class ContactsController < ApplicationController
   # GET /contacts/new.json
   def new
     @contact = Contact.new
-
+    @page = Page.find_by_name("contact")    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @contact }

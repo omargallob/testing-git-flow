@@ -39,7 +39,7 @@
         </p>
         <p>
           <b><%= t("activerecord.attributes.page.image", :default => t("activerecord.labels.image", :default => "Image")) %>:</b>
-          <%= image_tag @page.image, :width => 50 %>
+          <%= image_tag @page.image, :width => 50 unless @page.image_url.blank? %>
         </p>
 <% if @page.metatag %>
 <h1>Metatags</h1>

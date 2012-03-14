@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessible :title, :category_id,:description,:tagline
+  attr_accessible :title, :category_id,:description,:tagline, :published
   belongs_to :category
   
   has_one :metatag, :as => :metatagable,  :dependent => :destroy

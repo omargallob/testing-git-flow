@@ -22,13 +22,15 @@
     <%= f.text_field :albumable_type, :class => 'text_field' %>
     <span class="description">Ex: a simple text</span>
   </div>
+	<% if @album.albumable.blank? %>
 
-  <div class="group">
-    <%= f.label :category_id, t("activerecord.attributes.album.category_id", :default => "Category"), :class => :label %>
-    <%= f.number_field :category_id, :class => 'number_field' %>
-    <span class="description">Ex: a simple text</span>
-  </div>
-        
+	  <div class="group">
+	    <%= f.label :category_id, t("activerecord.attributes.album.category_id", :default => "Category"), :class => :label %>
+	  	<%= f.select(:category_id,Category.find_sub(9).map{|x|["#{x.title}",x.id]},{:include_blank => 'None Selected'}, :class => 'number_field') %>
+	    <span class="description">Ex: a simple text</span>
+	  </div>
+	<% end %>
+	     
 <div class="group navform wat-cf">
   <button class="button" type="submit">
     <%= image_tag("web-app-theme/icons/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}") %> <%= t("web-app-theme.save", :default => "Save") %>

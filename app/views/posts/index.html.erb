@@ -1,0 +1,28 @@
+
+
+<div class="grids">
+
+		<h1>Posts#index</h1>
+		<div id="posts" class="holder">
+			<%= render :partial => @posts %>
+			<%= render :partial => @posts %>
+			<%= render :partial => @posts %>
+		</div>
+
+</div>
+
+<% content_for(:script) do %>
+<script>
+$(function(){
+
+
+		$('#posts').masonry({
+    // options
+	    itemSelector : '.post',
+   		columnWidth : 235
+	  });	
+
+  
+});
+</script>
+<% end %>

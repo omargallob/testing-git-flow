@@ -76,7 +76,7 @@ class Admin::PagesController < Admin::BaseController
     @page.destroy
 
     respond_to do |format|
-      format.html { redirect_to pages_url }
+      format.html { redirect_to admin_pages_url }
       format.json { head :no_content }
     end
   end

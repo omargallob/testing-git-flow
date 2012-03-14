@@ -11,73 +11,8 @@
  *= require_self
  *= require colorbox/colorbox
  *= require validation/validationEngine
- *= require_tree .
+ *= require home
+ *= require simple_form
+
+ *= //require_tree .
 */
-@import "compass/css3";
-
-body{
-	background:
-		white;
-		padding:
-			10px;
-	//@include blueprint(true);
-	#home{
-		header{
-			background:
-				#fafafa;
-			border:
-				1px solid #aaaaaa;	
-
-			margin-bottom:
-				25px;	
-			@include border-radius(10px, 10px);				
-			nav{
-				ul{
-					margin-bottom:
-						0px;
-					padding:
-						5px 20px;
-					li{
-						display:
-							inline;
-						margin-right:
-							15px;
-						margin-top:
-							0px;
-					}
-				}
-			}
-		}
-		margin-top:
-			40px;
-		section#main{
-			padding:
-				20px;
-			background:
-				#fafafa;
-			float:
-				left;
-			width:
-				910px;
-			border:
-				1px solid #aaaaaa;
-			@include border-radius(10px, 10px);									
-		}
-		footer{
-			padding:
-				10px 5px;
-			width:
-				940px;
-			background:
-				#fafafa;
-			float:
-				left;
-			border:
-				1px solid #aaaaaa;
-			margin-top:
-				25px;
-			@include border-radius(10px, 10px);								
-		}
-	}
-	
-}

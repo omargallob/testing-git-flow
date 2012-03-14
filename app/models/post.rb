@@ -11,4 +11,6 @@ class Post < ActiveRecord::Base
   accepts_nested_attributes_for :metatag
   
   has_many :albums, :as => :albumable, :dependent => :destroy
+  
+  scope :published, where(:published => true)
 end

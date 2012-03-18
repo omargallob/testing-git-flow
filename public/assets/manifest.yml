@@ -6,7 +6,7 @@ web-app-theme/icons/application_edit.png: web-app-theme/icons/application_edit-a
 web-app-theme/icons/cross.png: web-app-theme/icons/cross-c7cecbf2f882d83d76089292bd4b0ddf.png
 web-app-theme/icons/key.png: web-app-theme/icons/key-0f52fededb9874aa079c90e25000a3e4.png
 web-app-theme/icons/tick.png: web-app-theme/icons/tick-64f108801155bd6b82a5471d038f25ea.png
-application.js: application-60c85ebab0cfff201e66ddb4371c2d56.js
+application.js: application-4bd3631611bba35c7495572c7a8db311.js
 application.css: application-acd35000365e60a13e7d6f06d557842c.css
 web-app-theme/themes/default/fonts/museo700-regular-webfont.eot: web-app-theme/themes/default/fonts/museo700-regular-webfont-ec339a8cc12074cc96d25e374aec4bb3.eot
 web-app-theme/themes/default/fonts/museo700-regular-webfont.svg: web-app-theme/themes/default/fonts/museo700-regular-webfont-9d78e69578fc177d07aa9dbd72cb9ee1.svg
@@ -28,12 +28,6 @@ web-app-theme/themes/default/images/button-background.png: web-app-theme/themes/
 web-app-theme/themes/default/images/messages/error.png: web-app-theme/themes/default/images/messages/error-7d4e005f33365cb85f4a3db51cac36c9.png
 web-app-theme/themes/default/images/messages/notice.png: web-app-theme/themes/default/images/messages/notice-c0f5ba9e9d2010de2e043ad4ed1f3b54.png
 web-app-theme/themes/default/images/messages/warning.png: web-app-theme/themes/default/images/messages/warning-7847b76c50f62ccfb383eca97daec65f.png
-ad-gallery/ad_next.png: ad-gallery/ad_next-4cd8ecd8f51962e2ceb25ca9bd2f0262.png
-ad-gallery/ad_prev.png: ad-gallery/ad_prev-0eeb15e65969d5dfef766a7cb3eb9677.png
-ad-gallery/ad_scroll_back.png: ad-gallery/ad_scroll_back-d21ba146cf1b613334d74c18144d9e13.png
-ad-gallery/ad_scroll_forward.png: ad-gallery/ad_scroll_forward-b8f86273278683eb8a0ad4107c1c500d.png
-ad-gallery/loader.gif: ad-gallery/loader-1f1b49c3e929246a2bd9589617792474.gif
-ad-gallery/opa75.png: ad-gallery/opa75-31efa2f83339f159a02a1f1640720d5b.png
 colorbox/border.png: colorbox/border-040529b1758bba9d31ae56dd5287f7c5.png
 colorbox/controls.png: colorbox/controls-e648327ada6618ac98639b18d35e3969.png
 colorbox/ie6/borderBottomCenter.png: colorbox/ie6/borderBottomCenter-723d0199ad5c715c976b0179aeda8d74.png

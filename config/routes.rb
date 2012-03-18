@@ -1,11 +1,11 @@
 Skeleton::Application.routes.draw do
-  get "posts/index"
 
-  get "posts/show"
 
-  get "viewer/show"
+
 
   resources :contacts
+  resources :posts, :as =>:news
+  resources :galleries
 
   namespace "admin" do
     resources :partners    
@@ -32,6 +32,8 @@ Skeleton::Application.routes.draw do
     match '/update_post_category' =>"posts#update_post_categories", :as => :update_post_categories
     root :to => "overview#index"
   end 
+  
+  match "/gallery" => "galleries#index", :as => :posts
   match "/news" => "posts#index", :as => :posts
   match "/:name" => "viewer#show", :as => :viewer
   root :to => "viewer#show", :name => "home"

@@ -13,6 +13,7 @@ gem "simple_form"
 gem "simple-navigation"
 gem 'country_select'
 gem "meta-tags"
+gem "heroku",'2.8'
 #gem "minimagick"
 # Gems used only for assets and not required
 # in production environments by default.
@@ -30,6 +31,10 @@ end
 gem 'jquery-rails'
 group :development, :test do
   gem 'web-app-theme', '>= 0.6.2'
+end
+
+group :production do
+  gem 'thin'
 end
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

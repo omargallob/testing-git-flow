@@ -92,7 +92,8 @@ width:100%;
   float: left;
   width: 100px;
   text-align: left;
-  margin: 5px 10px;
+  margin: 5px 0px;
+  padding:5px 0;
 	font-size:15px;
 	font-family: "CodeBoldRegular";
 }
@@ -124,7 +125,10 @@ div.boolean{
   float:left;
 	margin-right:10px;
 }
-
+.simple_form input[type='text'],.simple_form input[type='email'] {
+  width:280px;
+  padding:5px;
+}  
 div.boolean label, label.collection_radio {
   float: none;
   margin: 0;

@@ -15,4 +15,6 @@ $(function() {
 		  function () {
 				$(this).attr("src","/assets/logo.png");
 		  });
+
+
 });

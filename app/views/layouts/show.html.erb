@@ -21,12 +21,8 @@
 			</header>
     <div id="home" class="container ">
 
-			<div id="sidebar" class="span-6">
-				<nav>
-					<%= render_navigation %>
-				</nav>
-			</div>
-			<section id="main" class="span-17">
+
+			<section id="main" class="span-24">
 				
 	      <% flash.each do |name, msg| %>
 	        <%= content_tag :div, msg, :id => "flash_#{name}" %>

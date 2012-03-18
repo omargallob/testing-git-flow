@@ -70,8 +70,8 @@ body{
 						8px 0;
 					border-top:
 						0px none;	
-					border-bottom:
-						1px solid #878787;
+					background:
+						url("/assets/1x2.png") repeat-x bottom center;
 					a{
 						text-decoration:
 							none;
@@ -116,6 +116,67 @@ body{
 					padding-top:
 						20px;
 				}
+				#post{
+					.post-image{
+						float:
+							left;
+						img{
+							@include box-shadow(#BBBBBB 0 0 5px 0);	 
+						}
+					}
+					.post-details{
+						float:
+							left;
+						margin-left:
+							20px;
+						font-size:
+							13px;
+						h1{
+							padding-top:
+								0px;
+							font-size:
+								2em;
+							letter-spacing:
+								1px;
+							line-height:
+								1.5;
+							margin-bottom:
+								0.75em;
+							text-transform:
+								uppercase;
+						}
+						.post-info-view{
+					  	background:
+     						url("/assets/1x2.png") repeat-x top center;
+     					padding:
+     						20px 0 0;	
+						}
+						.back{
+							padding:
+								20px;
+							background:
+     						url("/assets/1x2.png") repeat-x top center;								
+							a:before{
+								color:
+									#BBBBBB;
+    						content:
+    							"←";
+    						padding-right:
+    							5px;
+							}
+							a{
+								text-decoration:
+									none;
+								color:
+									#444444;
+							}
+							a:hover{
+								color:
+									#ed106a;
+							}
+						}
+					}
+				}
 				#posts{
 					float:
 						left;
@@ -142,6 +203,7 @@ body{
     						pointer;
     					display:
     						block;
+
      				}
      				.info-block{
      					font-variant:
@@ -156,10 +218,8 @@ body{
      						13px;
      					letter-spacing:
      						0.75px;
-     					background-color:
-     						#F2F2F2;
-     					border-top:
-     						1px solid #444444;	
+     					background:
+     						url("/assets/1x2.png") #F2F2F2 repeat-x top center;	
      				}
 					}
 				}

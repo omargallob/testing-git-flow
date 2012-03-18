@@ -1,2 +1,17 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<div class="grids">
+	<div id="post">
+		<div class="post-image">
+			<%= image_tag @post.albums.first.uploads.first.image_url(:large) %>
+		</div>
+		<div class="post-details span-7">
+			<h1><%= @post.title %></h1>
+			<div class="post-info-view">
+				<p><%= @post.body %></p>
+			</div>
+			<div class="back">
+				<p><%= link_to "Back to Collection",:back %></p>
+			</div>
+		</div>
+		
+	</div>
+</div>

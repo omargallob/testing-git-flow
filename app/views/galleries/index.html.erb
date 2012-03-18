@@ -1,0 +1,34 @@
+<h1>Galleries</h1>
+
+<div id="gallery" class="ad-gallery">
+  <div class="ad-image-wrapper">
+  </div>
+  <div class="ad-controls">
+  </div>
+  <div class="ad-nav">
+    <div class="ad-thumbs">
+      <ul class="ad-thumb-list">
+      	<% @albums.each do |a| %>
+      	<%= render :partial => "upload", :collection => a.uploads %>  
+      	<% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<% content_for(:head) do %>
+	<%= stylesheet_link_tag "ad-gallery/jquery.ad-gallery" %>
+	<%= javascript_include_tag "ad-gallery/jquery.ad-gallery" %>
+	<%= javascript_include_tag "galleries" %>
+<% end %>
+<% content_for(:script) do %>
+
+
+	<script type="text/javascript">
+	$(function(){
+
+		$('#gallery').adGallery();
+  });
+	</script>
+<% end %>

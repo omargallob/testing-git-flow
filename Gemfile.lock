@@ -90,6 +90,7 @@ GEM
     multi_json (1.0.4)
     mysql2 (0.3.11)
     nifty-generators (0.4.6)
+    pg (0.13.2)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.1)
@@ -163,6 +164,7 @@ DEPENDENCIES
   mini_magick
   mysql2
   nifty-generators
+  pg
   rails (= 3.2.1)
   sass-rails
   simple-navigation

@@ -12,5 +12,5 @@ class Post < ActiveRecord::Base
   
   has_many :albums, :as => :albumable, :dependent => :destroy
   
-  scope :published, where(:published => true)
+  scope :published, where(:published => true).order("published_on DESC")
 end

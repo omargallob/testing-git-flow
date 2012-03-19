@@ -50,7 +50,7 @@ class Admin::PostsController < Admin::BaseController
     respond_to do |format|
       if @post.save
         @post.albums.create(:title =>"First  Album for Post #{@post.id}")
-        format.html { redirect_to admin_post_path(@post), notice: 'Post was successfully created.' }
+        format.html { redirect_to admin_post_album_path(@post,@post.albums.first), notice: 'Post was successfully created.' }
         format.json { render json: @post, status: :created, location: @post }
       else
         format.html { render action: "new" }
@@ -66,7 +66,7 @@ class Admin::PostsController < Admin::BaseController
 
     respond_to do |format|
       if @post.update_attributes(params[:post])
-        format.html { redirect_to admin_post_path(@post), notice: 'Post was successfully updated.' }
+        format.html { redirect_to  admin_post_path(@post), notice: 'Post was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

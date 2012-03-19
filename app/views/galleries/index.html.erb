@@ -18,17 +18,10 @@
 
 
 <% content_for(:head) do %>
-	<%= stylesheet_link_tag "ad-gallery/jquery.ad-gallery" %>
-	<%= javascript_include_tag "ad-gallery/jquery.ad-gallery" %>
-	<%= javascript_include_tag "galleries" %>
+	<%# stylesheet_link_tag "ad-gallery/jquery.ad-gallery" %>
+	<%# javascript_include_tag "ad-gallery/jquery.ad-gallery" %>
+	<%# javascript_include_tag "galleries" %>
 <% end %>
 <% content_for(:script) do %>
 
-
-	<script type="text/javascript">
-	$(function(){
-
-		$('#gallery').adGallery();
-  });
-	</script>
 <% end %>

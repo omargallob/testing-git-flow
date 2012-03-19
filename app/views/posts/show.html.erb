@@ -2,6 +2,7 @@
 	<div id="post">
 		<div class="post-image">
 			<%= image_tag @post.albums.first.uploads.first.image_url(:large) %>
+
 		</div>
 		<div class="post-details span-7">
 			<h1><%= @post.title %></h1>
@@ -15,4 +16,5 @@
 		</div>
 		
 	</div>
+	<div class="fb-comments" data-href="http://www.ragboneman.com" data-num-posts="2" data-width="620" style="float:left;"></div>
 </div>

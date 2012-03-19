@@ -121,13 +121,22 @@ body{
 					padding-top:
 						20px;
 				}
+				.fb-comments{
+					float:
+						left;
+					margin-top:
+						15px;
+				}
 				#post{
 					.post-image{
 						float:
 							left;
 						img{
 							@include box-shadow(#BBBBBB 0 0 5px 0);	 
+							float:
+								left;
 						}
+
 					}
 					.post-details{
 						float:

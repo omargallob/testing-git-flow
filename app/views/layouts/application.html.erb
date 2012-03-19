@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-
+   <%= display_meta_tags :site => 'Rag & Bone Man' %>
     <%= stylesheet_link_tag :application %>
   	<%= stylesheet_link_tag 'blueprint/print', :media => "print" %>
 		<link href='http://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>

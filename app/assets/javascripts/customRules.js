@@ -16,5 +16,6 @@ $(function() {
 				$(this).attr("src","/assets/logo.png");
 		  });
 
+	$("li#facebook a").attr("target","blank");
 
 });

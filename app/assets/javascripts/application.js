@@ -17,3 +17,4 @@
 //= require validation/languages/validationEngine-en
 //= require masonry/jquery.masonry.min
 
+//= require customRules.js

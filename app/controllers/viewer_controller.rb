@@ -4,5 +4,11 @@ class ViewerController < ApplicationController
     if @page.name == "home"
     	@posts = Post.all
     end
+
+    if @page.metatag
+    	set_meta_tags :title => @page.metatag.title,
+    								:description => @page.metatag.description,
+    								:keywords => @page.metatag.keywords
+    end
   end
 end

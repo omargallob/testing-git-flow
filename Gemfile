@@ -12,7 +12,7 @@ gem "nifty-generators"
 gem "simple_form"
 gem "simple-navigation"
 gem 'country_select'
-gem "meta-tags"
+gem 'meta-tags', :require => 'meta_tags'
 gem "heroku",'2.8'
 #gem "minimagick"
 # Gems used only for assets and not required

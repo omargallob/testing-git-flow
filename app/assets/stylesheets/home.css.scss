@@ -104,9 +104,14 @@ body{
 				left;
 			color:
 				#1b1b1b;
+
 			/*border:
 				1px solid #aaaaaa;
 			@include border-radius(10px, 10px);									*/
+			.fb-like{
+				margin-bottom:
+					10px;
+			}
 			.grids{
 				float:
 					left;
@@ -141,7 +146,7 @@ body{
 							line-height:
 								1.5;
 							margin-bottom:
-								0.75em;
+								0.25em;
 							text-transform:
 								uppercase;
 						}
@@ -237,7 +242,7 @@ body{
 				font-size:
 					2em;
 				margin-bottom:
-					0.75em;
+					0.25em;
 				line-height:
 					1.5;
 				text-transform:

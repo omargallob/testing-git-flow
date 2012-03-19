@@ -5,6 +5,8 @@ SimpleNavigation::Configuration.run do |navigation|
     primary.item :gallery, 'Gallery',viewer_path("gallery")
     primary.item :news, 'News', viewer_path("news")
     primary.item :contact, 'Contact', new_contact_path
-    primary.item :admin, 'Login', admin_root_path
+    primary.item :facebook, 'Facebook', "http://www.facebook.com/RagAndBoneMan
+"
+    #primary.item :admin, 'Login', admin_root_path
   end
 end

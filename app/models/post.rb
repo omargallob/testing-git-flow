@@ -1,10 +1,11 @@
 class Post < ActiveRecord::Base
-  attr_accessible :name,:title, :body, :category_id, :published,:published_on, :start_at, :end_date, :end_at, :image
+  attr_accessible :name,:title,:tag_list, :body,:category_id, :published,:published_on, :start_at, :end_date, :end_at, :image
   
   belongs_to :category
   mount_uploader :image, ImageUploader
   
-  
+  acts_as_taggable
+  acts_as_taggable_on :tags
   has_one :metatag, :as => :metatagable,  :dependent => :destroy
   attr_accessible :metatag_attributes 
   attr_writer :metatag_attributes

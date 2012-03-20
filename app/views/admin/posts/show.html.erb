@@ -50,7 +50,10 @@
           <b><%= t("activerecord.attributes.admin_post.end_at", :default => t("activerecord.labels.end_at", :default => "End at")) %>:</b>
           <%= @post.end_at %>
         </p>
-
+      <p>
+          <b><%= t("activerecord.attributes.admin_post.end_at", :default => t("activerecord.labels.end_at", :default => "Tags")) %>:</b>
+          <%= @post.tag_list %>
+        </p>
         
       <div class="wat-cf">
         <%= link_to image_tag("web-app-theme/icons/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}") + " " + t("web-app-theme.edit", :default=> "Edit"), edit_admin_post_path(@post), :class => "button" %> 

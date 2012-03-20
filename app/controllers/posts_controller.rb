@@ -7,4 +7,5 @@ class PostsController < ApplicationController
   	@post = Post.find(params[:id])
   	render :layout => "show"
   end
+
 end

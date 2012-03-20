@@ -23,8 +23,12 @@
 			<div id="sidebar" class="span-6">
 				<nav>
 					<%= render_navigation %>
-					<ul>
-						<li></li>
+					<ul class="footer">
+						<li class="cloud">
+							<% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+							  <%= link_to tag.name, { :action => :tag, :id => tag.name }, :class => css_class %>
+							<% end %>
+						</li>
 						<li class="footer">
 							<%= render :partial =>"shared/footer" %>		
 						</li>

@@ -11,4 +11,7 @@ class ViewerController < ApplicationController
     								:keywords => @page.metatag.keywords
     end
   end
+
+
+
 end

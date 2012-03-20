@@ -49,6 +49,10 @@ body{
 				left;
 			width:
 				230px;
+			ul.footer{
+				padding:
+					0 20px;
+			}	
 			ul{
 				list-style:
 					none;
@@ -63,6 +67,24 @@ body{
 				li:first{
 					border-top:
 						0px none;
+				}
+				li.cloud{
+					a{
+						color:
+							#878787;
+					}
+					.css1{
+						font-size: 1.0em;
+					}
+					.css2{
+						font-size: 1.2em;
+					}
+					.css3{
+						font-size: 1.4em;
+					}
+					.css4{
+					 font-size: 1.6em;
+					}
 				}
 				li.footer{
 					span.left{

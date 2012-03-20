@@ -200,8 +200,26 @@ body{
 				margin-top:
 					10px;				
 				h1{
+					background:
+						url("/assets/1x2.png") repeat-x bottom center;
+					float:
+						left;
 					padding-top:
 						20px;
+					width:
+						92%;						
+				}
+				form{
+					background:
+						url("/assets/1x2.png") repeat-x top center;
+					float:
+						left;
+					padding-top:
+						20px;
+					width:
+						92%;
+					margin-top:
+						10px;
 				}
 				.fb-comments{
 					float:

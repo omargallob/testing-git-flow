@@ -1,7 +1,11 @@
 <div class="grids">
 	<div class="span-12">
+			<h1><%= @page.title %>
+
+			<div class="fb-like" data-href="<%= request.url %>" data-send="false" data-width="450" data-show-faces="false"></div>
+			</h1>
 <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?oe=utf-8&amp;client=firefox-a&amp;q=Briesestr+9,+Neuk%C3%B6lln&amp;ie=UTF8&amp;hq=&amp;hnear=Briesestra%C3%9Fe+9,+Neuk%C3%B6lln+12053+Berlin,+Germany&amp;t=m&amp;z=14&amp;ll=52.478018,13.436465&amp;output=embed"></iframe><br /><small><a href="http://maps.google.com/maps?oe=utf-8&amp;client=firefox-a&amp;q=Briesestr+9,+Neuk%C3%B6lln&amp;ie=UTF8&amp;hq=&amp;hnear=Briesestra%C3%9Fe+9,+Neuk%C3%B6lln+12053+Berlin,+Germany&amp;t=m&amp;z=14&amp;ll=52.478018,13.436465&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
-	<h1><%= @page.title %></h1>
+
 	<%= render 'form' %>
 	</div>
 	<div class="span-4">
@@ -9,10 +13,3 @@
 		<p>Briesestr 9, Neukölln.<br/>Berlin 12053<br/>Germany</p>
 	</div>
 </div>
-
-<% content_for(:social) do %>
-<div class="social_header">
-	<div class="fb-like" data-href="<%= request.url %>" data-send="false" data-width="450" data-show-faces="false"></div>
-</div>
-<% end %>
-<%# link_to 'Back', contacts_path %>

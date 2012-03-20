@@ -1,12 +1,10 @@
 <div class="grids">
+<h1><%= @page.title %></h1>
 
+<div class="fb-like" data-href="<%= request.url %>" data-send="false" data-width="450" data-show-faces="false"></div>
 
-<% if @page.name =="home" %>
-<% content_for(:social) do %>
-<div class="social_header">
-	<div class="fb-like" data-href="<%= request.url %>" data-send="false" data-width="450" data-show-faces="false"></div>
-</div>
-<% end %>
+<p><%= @page.body unless @page.name =="home" %></p>
+
 		<div id="posts" class="holder">
 			<%= render :partial => @posts %>
 		</div>
@@ -26,10 +24,5 @@
 		});
 		</script>
 	<% end %>
-<% else %>
-<h1><%= @page.title %></h1>
-<div class="fb-like" data-href="<%= request.url %>" data-send="false" data-width="450" data-show-faces="false"></div>
-<p><%= @page.body %></p>
-<% end %>
 
 </div>

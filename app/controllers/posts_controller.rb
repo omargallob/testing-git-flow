@@ -5,7 +5,10 @@ class PostsController < ApplicationController
 
   def show
   	@post = Post.find(params[:id])
+
+   	set_meta_tags :title => @post.title
   	render :layout => "show"
+
   end
 
 end

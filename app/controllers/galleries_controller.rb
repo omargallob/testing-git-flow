@@ -1,6 +1,6 @@
 class GalleriesController < ApplicationController
   def index
-  	@albums = Album.all.delete_if{|x| x.uploads.count == 0}
+  	@albums = Album.all.delete_if{|x| x.albumable_id != nil}
   end
 
   def show

@@ -132,13 +132,7 @@ body{
 				#post{
 					.post-image{
 						float:
-							left;
-						img{
-							@include box-shadow(#BBBBBB 0 0 5px 0);	 
-							float:
-								left;
-						}
-
+							left;				
 					}
 					.post-details{
 						float:
@@ -219,7 +213,17 @@ body{
     						pointer;
     					display:
     						block;
-
+    					float:
+    						left;
+							a{
+								float:
+									left;
+								img{
+									@include box-shadow(#BBBBBB 0 0 5px 0);	 
+									float:
+										left;
+								}
+							}    						
      				}
      				.info-block{
      					font-variant:

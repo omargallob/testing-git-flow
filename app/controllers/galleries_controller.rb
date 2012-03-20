@@ -4,5 +4,6 @@ class GalleriesController < ApplicationController
   end
 
   def show
+  	@album = Album.find_by_id(params[:id])
   end
 end

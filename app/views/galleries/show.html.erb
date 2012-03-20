@@ -1,2 +1,10 @@
-<h1>Galleries#show</h1>
-<p>Find me in app/views/galleries/show.html.erb</p>
+<div class="grids">
+<!--
+    <h1>Posts#index</h1>
+    <div class="fb-like" data-href="http://ragboneman.com/news" data-send="false" data-width="450" data-show-faces="false"></div>
+-->
+    <div id="gallery_holder" class="holder">
+        <%= render :partial => "album", :object => @album %>  
+    </div>
+
+</div>

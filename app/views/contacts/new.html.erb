@@ -9,4 +9,10 @@
 		<p>Briesestr 9, Neukölln.<br/>Berlin 12053<br/>Germany</p>
 	</div>
 </div>
+
+<% content_for(:social) do %>
+<div class="social_header">
+	<div class="fb-like" data-href="<%= request.url %>" data-send="false" data-width="450" data-show-faces="false"></div>
+</div>
+<% end %>
 <%# link_to 'Back', contacts_path %>

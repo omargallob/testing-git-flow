@@ -135,11 +135,27 @@ body{
 						letter-spacing:
 							1px;
 					}
-					a:hover{
-						text-decoration:
-							underline;
+					a.selected:before{
 						color:
-							black;
+							#181818;
+    				content:
+    					"→";
+    				padding-right:
+    					5px;
+					}
+					a.selected:hover:after{
+						content:
+    					"";
+					}
+					a:hover:after{
+						text-decoration:
+							none;
+						color:
+							#181818;
+						content:
+  						"→";
+						padding-left:
+							5px;	
 					}
 				}
 			}

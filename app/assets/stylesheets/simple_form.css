@@ -113,6 +113,11 @@ width:100%;
   margin-left: 148px;
 	margin-top:0px;
 }
+.contact input[type='submit'] {
+  margin-right: 74px;
+  margin-top:0px;
+  float:right;
+}
 div.boolean{
 	margin-left:150px;
 }

@@ -20,15 +20,14 @@
 <% content_for(:script) do %>
 <script>
 $(function(){
-
-
-    $('#gallery_holder').masonry({
-    // options
-      itemSelector : '.upload',
-      columnWidth : 235,
-    }); 
-
-  
+    var $container = $('#gallery_holder');
+    $container.imagesLoaded( function(){
+        $container.masonry({
+        // options
+          itemSelector : '.upload',
+                columnWidth : 235
+        }); 
+    });       
 });
 </script>
 <% end %>

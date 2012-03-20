@@ -18,11 +18,16 @@
 				</div>
 			
 			</header>
-    <div id="home" class="container ">
+    <div id="home" class="container">
 
 			<div id="sidebar" class="span-6">
 				<nav>
 					<%= render_navigation %>
+					<ul>
+						<li></li>
+						<li class="footer">
+							<%= render :partial =>"shared/footer" %>		
+						</li>
 				</nav>
 			</div>
 			<section id="main" class="span-17">
@@ -34,7 +39,7 @@
       	<%= yield %>
 			</section>
 			<footer>
-				<%= render :partial => "shared/footer" %>
+			
 			</footer>
     </div>
     <%= yield(:script) %>

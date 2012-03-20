@@ -1,8 +1,8 @@
 <div class="grids">
-<!--
-    <h1>Posts#index</h1>
-    <div class="fb-like" data-href="http://ragboneman.com/news" data-send="false" data-width="450" data-show-faces="false"></div>
--->
+<h1><%= @album.title %></h1>
+
+    <div class="fb-like" data-href="<%= gallery_url(@album) %>" data-send="false" data-width="450" data-show-faces="false"></div>
+
     <div id="gallery_holder" class="holder">
         <%= render :partial => "album", :object => @album %>  
     </div>

@@ -200,8 +200,7 @@ body{
 				margin-top:
 					10px;				
 				h1{
-					background:
-						url("/assets/1x2.png") repeat-x bottom center;
+					
 					float:
 						left;
 					padding-top:
@@ -209,6 +208,39 @@ body{
 					width:
 						92%;						
 				}
+				small{
+					float:
+						left;
+					width:
+						100px;
+					margin-top:
+						10px;
+					a{
+						color:
+							#878787;
+					}
+				}
+				iframe{
+					background:
+						url("/assets/1x2.png") repeat-x top center;
+					float:
+						left;
+					padding-top:
+						20px;				
+					margin-top:
+						0px;
+				}
+				iframe.fb_ltr{
+					background:
+						none;
+					float:
+						left;	
+					padding:
+						0px;
+					margin:
+						0px;									
+				}
+
 				form{
 					background:
 						url("/assets/1x2.png") repeat-x top center;
@@ -311,6 +343,10 @@ body{
 						left;
 					width:
 						720px;
+					background:
+     				url("/assets/1x2.png") repeat-x top center;							
+     			padding-top:
+     				20px;
 					.upload, .post{
 						float:
 							left;

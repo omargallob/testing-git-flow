@@ -91,6 +91,28 @@ body{
 					.css4{
 					 font-size: 1.6em;
 					}
+					a.selected:before{
+						color:
+							#181818;
+    				content:
+    					"→";
+    				padding-right:
+    					5px;
+					}
+					a.selected:hover:after{
+						content:
+    					"";
+					}
+					a:hover:after{
+						text-decoration:
+							none;
+						color:
+							#181818;
+						content:
+  						"→";
+						padding-left:
+							5px;	
+					}
 				}
 				li.footer{
 					span.left{
@@ -134,29 +156,7 @@ body{
 							lowercase;
 						letter-spacing:
 							1px;
-					}
-					a.selected:before{
-						color:
-							#181818;
-    				content:
-    					"→";
-    				padding-right:
-    					5px;
-					}
-					a.selected:hover:after{
-						content:
-    					"";
-					}
-					a:hover:after{
-						text-decoration:
-							none;
-						color:
-							#181818;
-						content:
-  						"→";
-						padding-left:
-							5px;	
-					}
+					}					
 				}
 			}
 		}	

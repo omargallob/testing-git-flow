@@ -1,20 +1,15 @@
-<h1>Galleries</h1>
-<div class="fb-like" data-href="http://ragboneman.com/galleries" data-send="false" data-width="450" data-show-faces="false"></div>
-<div id="gallery" class="ad-gallery">
-  <div class="ad-image-wrapper">
-  </div>
-  <div class="ad-controls">
-  </div>
-  <div class="ad-nav">
-    <div class="ad-thumbs">
-      <ul class="ad-thumb-list">
-      	<% @albums.each do |a| %>
-      	<%= render :partial => "upload", :collection => a.uploads %>  
-      	<% end %>
-      </ul>
+<div class="grids">
+<!--
+    <h1>Posts#index</h1>
+    <div class="fb-like" data-href="http://ragboneman.com/news" data-send="false" data-width="450" data-show-faces="false"></div>
+-->
+    <div id="gallery_holder" class="holder">
+        <%= render :partial => "album", :collection => @albums %>  
     </div>
-  </div>
+
 </div>
+
+  
 
 
 <% content_for(:head) do %>
@@ -23,5 +18,17 @@
 	<%# javascript_include_tag "galleries" %>
 <% end %>
 <% content_for(:script) do %>
+<script>
+$(function(){
 
+
+    $('#gallery_holder').masonry({
+    // options
+      itemSelector : '.upload',
+      columnWidth : 235,
+    }); 
+
+  
+});
+</script>
 <% end %>

@@ -3,7 +3,7 @@
 
 <div class="fb-like" data-href="<%= request.url %>" data-send="false" data-width="450" data-show-faces="false"></div>
 
-<p><%= @page.body unless @page.name =="home" %></p>
+<%= content_tag(:p, @page.body) unless @page.name =="home" %>
 
 		<div id="posts" class="holder">
 			<%= render :partial => @posts %>

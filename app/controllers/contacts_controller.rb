@@ -29,6 +29,11 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new
     @page = Page.find_by_name("contact")    
+    if @page.metatag
+      set_meta_tags :title => @page.metatag.title,
+                    :description => @page.metatag.description,
+                    :keywords => @page.metatag.keywords
+    end
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @contact }

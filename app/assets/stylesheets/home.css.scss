@@ -270,7 +270,7 @@ body{
      					relative;
      				margin-bottom:
      					15px;
-     				.post-link{
+     				a.post-link{
      					border:
      						4px solid #FFFFFF;
     					cursor:
@@ -279,15 +279,12 @@ body{
     						block;
     					float:
     						left;
-							a{
+							img{
+									@include box-shadow(#BBBBBB 0 0 5px 0);	
 								float:
 									left;
-								img{
-									@include box-shadow(#BBBBBB 0 0 5px 0);	 
-									float:
-										left;
-								}
-							}    						
+							}
+							    						
      				}
      				.info-block{
      					font-variant:
@@ -304,6 +301,10 @@ body{
      						0.75px;
      					background:
      						url("/assets/1x2.png") #F2F2F2 repeat-x top center;	
+     					float:
+     						left;
+     					width:
+     						202px;
      				}
      				.info-comments{
 	     				background:

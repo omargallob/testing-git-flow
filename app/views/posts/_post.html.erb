@@ -4,6 +4,9 @@
 		<span><%= post.title %></span>
 	</div>
 	<div class="info-block">
-		<span><%= post.published_on.strftime("%d %B %y") %></span>
+		<span><%=  post.category.parent.title + " - " + post.category.title %></span>
+	</div>
+	<div class="info-block">
+		<span><%= post.published_on.strftime("%d-%m-%y") %></span>
 	</div>
 </div>

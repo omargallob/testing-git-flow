@@ -78,6 +78,10 @@ body{
 					a{
 						color:
 							#878787;
+						margin:
+							0 6px;
+						text-decoration:
+							none;
 					}
 					.css1{
 						font-size: 1.0em;
@@ -91,6 +95,12 @@ body{
 					.css4{
 					 font-size: 1.6em;
 					}
+					a:hover{
+						text-decoration:
+							underline;
+						color:
+							black;
+					}
 					a.selected:before{
 						color:
 							#181818;
@@ -99,10 +109,7 @@ body{
     				padding-right:
     					5px;
 					}
-					a.selected:hover:after{
-						content:
-    					"";
-					}
+
 					a:hover:after{
 						text-decoration:
 							none;
@@ -156,7 +163,15 @@ body{
 							lowercase;
 						letter-spacing:
 							1px;
-					}					
+					}	
+					a:hover{
+						text-decoration:
+							underline;
+					}	
+					a.selected{
+						
+						
+					}			
 				}
 			}
 		}	

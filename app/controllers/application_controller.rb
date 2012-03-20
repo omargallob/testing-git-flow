@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
 
 
 	def tag_cloud
-		@tags = Post.tag_counts_on(:tags)
+		@tags = Post.published.tag_counts_on(:tags)
 	end
 end

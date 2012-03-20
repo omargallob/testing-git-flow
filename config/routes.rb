@@ -33,8 +33,8 @@ Skeleton::Application.routes.draw do
     root :to => "overview#index"
   end 
   
-  match "/gallery" => "galleries#index", :as => :posts
-  match "/news" => "posts#index", :as => :posts
+  match "/gallery" => "galleries#index", :as => :galleries
+  match "/tags/:tag" => "posts#index", :as => :posts
   match "/:name" => "viewer#show", :as => :viewer
   root :to => "viewer#show", :name => "home"
   #root :to => 'home#index'

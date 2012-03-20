@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.published
+    @posts = Post.published.tagged_with(params[:tag])
   end
 
   def show

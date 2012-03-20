@@ -2,7 +2,11 @@
 
 
 <% if @page.name =="home" %>
-<div class="fb-like" data-href="<%= request.url %>" data-send="false" data-width="450" data-show-faces="false"></div>
+<% content_for(:social) do %>
+<div class="social_header">
+	<div class="fb-like" data-href="<%= request.url %>" data-send="false" data-width="450" data-show-faces="false"></div>
+</div>
+<% end %>
 		<div id="posts" class="holder">
 			<%= render :partial => @posts %>
 		</div>

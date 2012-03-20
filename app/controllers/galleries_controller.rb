@@ -11,7 +11,7 @@ class GalleriesController < ApplicationController
 
   def show
   	@album = Album.find_by_id(params[:id])
-		set_meta_tags :title => "Gallery | #{@album.title}",
-  								:description => @album.description
+		# set_meta_tags :title => "Gallery | #{@album.title}",
+  # 								:description => @album.description
   end
 end

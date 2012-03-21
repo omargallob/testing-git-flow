@@ -3,6 +3,8 @@ Skeleton::Application.routes.draw do
 
 
 
+  devise_for :admins
+
   resources :contacts
   resources :posts, :as =>:news
   resources :galleries

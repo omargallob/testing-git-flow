@@ -1,7 +1,7 @@
 class Admin::BaseController < ApplicationController		
 
    layout 'admin'
-   #before_filter :authenticate_admin!
+   before_filter :authenticate_admin!
   
    # uses_tiny_mce :options => {
    #                            :theme_advanced_toolbar_location => "top",

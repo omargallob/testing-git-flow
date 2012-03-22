@@ -2,10 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "compass/css3";
+@include font-face("Pica10BTRoman", font-files("/assets/pica_10_pitch_bt-webfont.woff", woff, "/assets/pica_10_pitch_bt-webfont.otf", opentype), "/assets/pica_10_pitch_bt-webfont.eot");
+@include font-face("TFForeverRegularRegular", font-files("/assets/tfforever-regular-normal-webfont-webfont.woff", woff, "/assets/tfforever-regular-normal-webfont-webfont.otf", opentype), "/assets/entypo-webfont.eot");
+
+
+
 
 body{
 	background:
-		#E7E7E7;
+		white;
 	padding:
 		0;
 	color:
@@ -21,13 +26,96 @@ body{
 		padding-top:
 			10px;	
 		background:
-			white;
+			#E7E7E7;
 		border-bottom:
 			1px solid #BBB;
 		@include box-shadow(rgba(0, 0, 0, 0.1) 0 0 5px 0 );	
 		#logo_container{
 			width:
-				266px;
+				950px;
+			a{
+				float:
+					left;
+				margin-top:
+					10px;
+				img{
+					padding-top:
+						4px;
+					float:
+						left;
+				}	
+			}
+			
+			nav{
+				float:
+					left;
+				width:
+					590px;
+				padding-bottom:
+					15px;
+				ul{
+					list-style:
+						none;
+					margin:
+						0px auto;
+					margin-bottom:
+						0px;
+					padding:
+						5px 20px;
+					float:
+						right;
+					li.selected{
+						border-bottom:
+							2px solid black;
+					}
+					li:hover{
+						border-bottom:
+							2px solid black;
+					}
+					li{
+						border-bottom:
+							2px solid transparent;
+						float:
+							left;
+						margin:
+							0px 10px 0px 0;
+						padding:
+							8px 0 4px 0;
+						border-top:
+							0px none;	
+						font-variant:
+							small-caps;
+						font-size:
+							15px;			
+						font-family:
+							"TFForeverRegularRegular";			
+						// background:
+						// 	url("/assets/1x2.png") repeat-x bottom center;
+						a{
+							text-decoration:
+								none;
+							color:
+								#181818;
+							font-variant:
+								small-caps;
+							font-size:
+								15px;
+							text-transform:
+								lowercase;
+							letter-spacing:
+								1px;
+						}	
+						a:hover{
+							text-decoration:
+								none;
+						}	
+						a.selected{
+							
+							
+						}			
+					}
+				}
+			}	
 		}
 		.social_header{
 			width:
@@ -36,9 +124,8 @@ body{
 				0px auto 10px auto;
 		}
 		div.lgc{
-
 			margin:
-				0px auto;		
+				0px auto;
 			cursor:
 				pointer;
 			img{
@@ -48,6 +135,7 @@ body{
 					10px;
 			}
 		}
+		
 	}
 	#home{		
 		nav{
@@ -70,11 +158,10 @@ body{
 					5px 20px;
 				float:
 					left;
-				li:first{
-					border-top:
-						0px none;
-				}
+
 				li.cloud{
+					font-family:
+						"Pica10BTRoman";
 					a{
 						color:
 							#878787;
@@ -216,7 +303,9 @@ body{
 					padding-top:
 						20px;
 					width:
-						92%;						
+						92%;				
+					font-family:
+						"TFForeverRegularRegular";	
 				}
 				small{
 					float:
@@ -352,7 +441,7 @@ body{
 					float:
 						left;
 					width:
-						720px;
+						710px;
 					background:
      				url("/assets/1x2.png") repeat-x top center;							
      			padding-top:

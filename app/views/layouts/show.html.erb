@@ -13,8 +13,12 @@
   </head>
   <body>
 			<header id="top">
-				<div id="logo_container" class="lgc">
-					<%= link_to(image_tag("logo.png", :width => "200", :id=>"flogo"), root_url) %>
+				<div id="logo_container" class="container">
+					<%= link_to(image_tag("logo-black.png", :width => "300", :id=>"flogo"), root_url) %>
+          <nav>
+          <%= render_navigation %>
+          <%# render :partial => "shared/side_foot" %>
+          </nav>
 				</div>
 			
 			</header>

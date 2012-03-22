@@ -25,7 +25,7 @@
 
   <div class="group">
     <%= f.label :body, t("activerecord.attributes.page.body", :default => "Body"), :class => :label %>
-    <%= f.text_area :body, :class => 'text_area' %>
+    <%= f.cktext_area  :body,:toolbar => 'Easy', :input_html =>{:class => 'text_area'} %>
     <span class="description">Ex: a simple text</span>
   </div>
 

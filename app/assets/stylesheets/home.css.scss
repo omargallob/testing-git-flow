@@ -192,13 +192,23 @@ body{
 				margin-bottom:
 					0px;
 			}
+			// .grids:first-child p{
+			// 	margin-top:
+			// 		40px;
+			// }
 			.grids{
 				float:
 					left;
 				width:
 					100%;	
 				margin-top:
-					10px;				
+					10px;	
+				hr{
+					height:
+						2px;
+					background:
+						url("/assets/1x2.png") repeat-x;
+				}			
 				h1{
 					
 					float:

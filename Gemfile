@@ -17,7 +17,8 @@ gem "heroku",'2.8'
 gem 'acts-as-taggable-on', '~> 2.2.2'
 gem 'devise'
 gem "bcrypt-ruby", :require => "bcrypt"
-
+gem "orm_adapter"
+gem "ckeditor", :git => "git://github.com/galetahub/ckeditor.git"
 #gem "minimagick"
 # Gems used only for assets and not required
 # in production environments by default.

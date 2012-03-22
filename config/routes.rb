@@ -3,6 +3,8 @@ Skeleton::Application.routes.draw do
 
 
 
+  mount Ckeditor::Engine => '/ckeditor'
+
   devise_for :admins
 
   resources :contacts

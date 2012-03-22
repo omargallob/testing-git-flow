@@ -31,7 +31,7 @@
 
         <p>
           <b><%= t("activerecord.attributes.page.body", :default => t("activerecord.labels.body", :default => "Body")) %>:</b>
-          <%= @page.body %>
+          <%= @page.body.html_safe %>
         </p>
         <p>
           <b><%= t("activerecord.attributes.page.position", :default => t("activerecord.labels.position", :default => "Position")) %>:</b>

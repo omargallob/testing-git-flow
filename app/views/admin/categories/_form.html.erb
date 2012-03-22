@@ -25,7 +25,7 @@
 
   <div class="group">
     <%= f.label :description, t("activerecord.attributes.category.description", :default => "Description"), :class => :label %>
-    <%= f.text_area :description, :class => 'text_area validate[required]' %>
+    <%= f.cktext_area :description,:toolbar => 'Easy', :input_html =>{:class => 'text_area validate[required]'} %>
     <span class="description">Ex: a simple text</span>
   </div>
 

@@ -7,7 +7,7 @@
 
   <div class="group">
     <%= f.label :description, t("activerecord.attributes.album.description", :default => "Description"), :class => :label %>
-    <%= f.text_area :description, :class => 'text_area validate[required] ' %>
+    <%= f.cktext_area(:description, :class => 'text_area validate[required]') %>
     <span class="description">Ex: a simple text</span>
   </div>
 

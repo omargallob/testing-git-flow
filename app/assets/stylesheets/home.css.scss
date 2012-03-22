@@ -31,13 +31,15 @@ body{
 			1px solid #BBB;
 		@include box-shadow(rgba(0, 0, 0, 0.1) 0 0 5px 0 );	
 		#logo_container{
+			margin-top:
+				30px;
 			width:
 				950px;
-			a{
+			a#logo{
 				float:
 					left;
-				margin-top:
-					10px;
+				margin:
+					10px 0 0 40px;
 				img{
 					padding-top:
 						4px;
@@ -48,7 +50,7 @@ body{
 			
 			nav{
 				float:
-					left;
+					right;
 				width:
 					590px;
 				padding-bottom:
@@ -158,7 +160,7 @@ body{
 					5px 20px;
 				float:
 					left;
-					
+
 				li.cloud{
 					font-family:
 						"Pica10BTRoman";
@@ -506,10 +508,12 @@ body{
      				}
 					}
 				}
-				.span-3{
+				.span-4{
 					p{
 						font-size:
 							13px;
+						font-family:
+							"Pica10BTRoman";	
 						strong{
 							
 						}

@@ -14,7 +14,7 @@
   <body>
 			<header id="top">
 				<div id="logo_container" class="container">
-					<%= link_to(image_tag("logo-black.png", :width => "300", :id=>"flogo"), root_url) %>
+					<%= link_to(image_tag("logo-black.png", :width => "300", :id=>"flogo"), root_url, :id=>"logo") %>
 					<nav>
 					<%= render_navigation %>
 					<%# render :partial => "shared/side_foot" %>

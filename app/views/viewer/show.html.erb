@@ -1,10 +1,13 @@
 <div id="postscontainer" class="grids main">
+<div id="top-header">
 <h1><%= @page.title %></h1>
 
 <div class="fb-like" data-href="<%= request.url %>" data-send="false" data-show-faces="false" data-colorscheme="light" ></div> 
+</div>
 <% unless @page.name =="home" %>
 
-<%=  @page.body.html_safe %>
+<%= content_tag :div, @page.body.html_safe, :id=>"main-content" unless  @page.body.blank? %>
+
 <% end %>
 <% if  @page.name =="home" %>
 		<div id="posts" class="holder">

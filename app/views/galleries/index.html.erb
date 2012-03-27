@@ -1,10 +1,12 @@
-<div class="grids">
+<div id="postscontainer" class="grids main">
+    <div id="top-header">
 <h1><%= @page.title %></h1>
  <div class="fb-like fb-like-viewer" data-href="<%= request.url %>" data-send="false" data-width="450" data-show-faces="false"></div>
 <!--
     <h1>Posts#index</h1>
    
 -->
+</div>
     <div id="gallery_holder" class="holder">
         <%= render :partial => "album", :collection => @albums %>  
     </div>

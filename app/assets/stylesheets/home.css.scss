@@ -264,10 +264,10 @@ body{
 			// 		40px;
 			// }
 			#postscontainer.main{
-				width:
-					710px;
+				float:	
+					left;
 				background:
-					white;
+					transparent;
 				h1{
 					color:
 						#181818;
@@ -276,6 +276,24 @@ body{
 				}
 				.fb-like{
 					margin-left:
+						20px;
+					padding-bottom:
+						20px;
+				}
+				#main-content,#top-header{
+					width:
+						930px;
+					float:
+						left;
+					background:
+						white;
+					margin-bottom:
+						10px;
+					padding-top:
+						0px;
+				}
+				#main-content{
+					padding-top:
 						20px;
 				}
 			}

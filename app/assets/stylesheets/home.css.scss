@@ -19,136 +19,175 @@ body{
 		Georgia,'Times New Roman', Times, serif;
 		
 	//@include blueprint(true);
-	header#top{		
-
-		margin:
-			0px 0 15px 0;		
-		padding-top:
-			10px;	
+	p{
+		font-size:
+			13px;
+		font-family:
+			"Pica10BTRoman";	
+		strong{
+			
+		}
+					}
+	#breadcrumbs{
+		border:
+			0px none;
+		font-family:
+			"Pica10BTRoman";			
+		font-size:
+			15px;
+		span{
+			padding:
+				0 20px;
+			text-decoration:
+				none;
+			color:
+				black;
+			a{
+				color:
+					#878787;
+				text-decoration:
+					none;
+			}
+			a:hover{
+				color:
+					black;
+				text-decoration:
+						none;	
+			}
+		}
+	}
+	#home.container{		
+		border-top:
+			0px none;
 		background:
+			url(/assets/transparent.png) repeat;
+		color:
 			white;
-		// border-bottom:
-		// 	1px solid #BBB;
-		// @include box-shadow(rgba(0, 0, 0, 0.1) 0 0 5px 0 );	
-		#logo_container{
-			margin-top:
-				30px;
-			width:
-				950px;
-			a#logo{
+		margin:
+			50px auto;	
+		header#top{		
+			margin:
+				0px 0 15px 0;		
+			padding-top:
+				0px;	
+			background:
+				transaprent;
+			// border-bottom:
+			// 	1px solid #BBB;
+			// @include box-shadow(rgba(0, 0, 0, 0.1) 0 0 5px 0 );	
+			#logo_container{
+				width:
+					50%;
 				float:
 					left;
-				margin:
-					3px 0 0 40px;
-				img{
-					padding-top:
-						0px;
+				a#logo{
 					float:
 						left;
-				}	
-			}
-			
-			nav{
-				float:
-					right;
-				width:
-					590px;
-				padding-bottom:
-					15px;
-				ul{
-					list-style:
-						none;
 					margin:
-						0px auto;
-					margin-bottom:
-						0px;
-					padding:
-						5px 20px;
-					float:
-						right;
-					li.selected{
-						border-bottom:
-							2px solid black;
-					}
-					li:hover{
-						border-bottom:
-							2px solid black;
-					}
-					li{
-						border-bottom:
-							2px solid transparent;
+						10px 0 0 40px;
+					img{
+						padding-top:
+							0px;
 						float:
 							left;
+					}	
+				}
+				
+				nav{
+					float:
+						right;
+					width:
+						50%;
+					padding-bottom:
+						15px;
+					ul{
+						list-style:
+							none;
 						margin:
-							0px 10px 0px 0;
+							0px auto;
+						margin-bottom:
+							0px;
 						padding:
-							8px 0 4px 0;
-						border-top:
-							0px none;	
-						font-variant:
-							small-caps;
-						font-size:
-							15px;			
-						font-family:
-							"TFForeverRegularRegular";			
-						// background:
-						// 	url("/assets/1x2.png") repeat-x bottom center;
-						a{
-							text-decoration:
-								none;
-							color:
-								#181818;
+							5px 20px;
+						float:
+							right;
+						li.selected{
+							border-bottom:
+								2px solid black;
+						}
+						li:hover{
+							border-bottom:
+								2px solid black;
+						}
+						li{
+							border-bottom:
+								2px solid transparent;
+							float:
+								left;
+							margin:
+								0px 10px 0px 0;
+							padding:
+								8px 0 4px 0;
+							border-top:
+								0px none;	
 							font-variant:
 								small-caps;
 							font-size:
-								15px;
-							text-transform:
-								lowercase;
-							letter-spacing:
-								1px;
-						}	
-						a:hover{
-							text-decoration:
-								none;
-						}	
-						a.selected{
-							
-							
-						}			
+								15px;			
+							font-family:
+								"TFForeverRegularRegular";			
+							// background:
+							// 	url("/assets/1x2.png") repeat-x bottom center;
+							a{
+								text-decoration:
+									none;
+								color:
+									#181818;
+								font-variant:
+									small-caps;
+								font-size:
+									15px;
+								text-transform:
+									lowercase;
+								letter-spacing:
+									1px;
+							}	
+							a:hover{
+								text-decoration:
+									none;
+							}	
+							a.selected{
+								
+								
+							}			
+						}
 					}
-				}
-			}	
-		}
-		.social_header{
-			width:
-				920px;
-			margin:
-				0px auto 10px auto;
-		}
-		div.lgc{
-			margin:
-				0px auto;
-			cursor:
-				pointer;
-			img{
+				}	
+			}
+			.social_header{
+				width:
+					920px;
+				margin:
+					0px auto 10px auto;
+			}
+			div.lgc{
+				margin:
+					0px auto;
 				cursor:
 					pointer;
-				margin-bottom:
-					10px;
+				img{
+					cursor:
+						pointer;
+					margin-bottom:
+						10px;
+				}
 			}
-		}
-		
-	}
-	#home{		
-		nav{
+		}			
+		nav#main{
 			float:
-				left;
+				right;
 			width:
-				230px;
-			ul.footer{
-				padding:
-					0 20px;
-			}	
+				50%;
 			ul{
 				list-style:
 					none;
@@ -159,76 +198,8 @@ body{
 				padding:
 					5px 20px;
 				float:
-					left;
-
-				li.cloud{
-					font-family:
-						"Pica10BTRoman";
-					a{
-						color:
-							#878787;
-						margin:
-							0 6px;
-						text-decoration:
-							none;
-					}
-					.css1{
-						font-size: 1.0em;
-					}
-					.css2{
-						font-size: 1.2em;
-					}
-					.css3{
-						font-size: 1.4em;
-					}
-					.css4{
-					 font-size: 1.6em;
-					}
-					a:hover{
-						text-decoration:
-							none;
-						color:
-							black;
-					}
-					a.selected:before{
-						color:
-							#181818;
-    				content:
-    					"→";
-    				padding-right:
-    					5px;
-					}
-
-					a:hover:after{
-						text-decoration:
-							none;
-						color:
-							#181818;
-						content:
-  						"→";
-						padding-left:
-							5px;	
-					}
-				}
-				li.footer{
-					span.left{
-						a{
-							color:
-								#878787;
-							font-variant:
-								normal;
-							font-size:
-								13px;
-							letter-spacing:
-								0px;
-							text-transform:
-								capitalize;
-						}	
-					}
-				}
+					right;
 				li{
-					width:
-						100%;
 					float:
 						left;
 					margin:
@@ -237,17 +208,19 @@ body{
 						8px 0;
 					border-top:
 						0px none;	
+					font-family:
+						"TFForeverRegularRegular";							
 					// background:
 					// 	url("/assets/1x2.png") repeat-x bottom center;
 					a{
 						text-decoration:
 							none;
 						color:
-							#181818;
+							white;
 						font-variant:
 							small-caps;
 						font-size:
-							14px;
+							16px;
 						text-transform:
 							lowercase;
 						letter-spacing:
@@ -255,11 +228,13 @@ body{
 					}	
 					a:hover{
 						text-decoration:
-							underline;
+							none;
+						border-bottom:
+							2px solid white;
 					}	
 					a.selected{
-						
-						
+						border-bottom:
+							2px solid white;						
 					}			
 				}
 			}
@@ -272,42 +247,75 @@ body{
 			float:
 				left;
 			color:
-				#1b1b1b;
-
+				transparent;
 			/*border:
 				1px solid #aaaaaa;
 			@include border-radius(10px, 10px);									*/
 			.fb-like{
 				margin-bottom:
 					0px;
+				margin-left:
+					0px;
+				float:
+					left;
 			}
 			// .grids:first-child p{
 			// 	margin-top:
 			// 		40px;
 			// }
+			#postscontainer.main{
+				width:
+					710px;
+				background:
+					white;
+				h1{
+					color:
+						#181818;
+					margin:
+						20px 20px 5px 20px;
+				}
+				.fb-like{
+					margin-left:
+						20px;
+				}
+			}
 			.grids{
 				float:
 					left;
 				width:
-					100%;	
-				margin-top:
-					10px;	
+					930px;
+
+				margin:
+					0px 10px 10px 10px;
+
+				color:	
+					#181818;	
+				.fb-like-viewer{
+					width:
+						860px;
+					margin:
+						0 40px 20px 40px;
+				}	
+				.fb-like-contact{
+
+					margin:
+						0 0px 0px 40px;
+				}	
+				p{
+					padding:
+						0 40px;	
+				}
 				hr{
 					height:
 						2px;
-					background:
-						url("/assets/1x2.png") repeat-x;
+					// background:
+					// 	url("/assets/1x2.png") repeat-x;
 				}			
 				h1{
-					
-					float:
-						left;
-					padding-top:
-						20px;
-					width:
-						92%;				
+					color:	
+						white;
 					font-family:
-						"TFForeverRegularRegular";	
+						"TFForeverRegularRegular";						
 				}
 				small{
 					float:
@@ -318,7 +326,7 @@ body{
 						10px;
 					a{
 						color:
-							#878787;
+							white;
 					}
 				}
 				iframe{
@@ -357,21 +365,41 @@ body{
 				.fb-comments{
 					float:
 						left;
-					margin-top:
-						15px;
+					margin:
+						0px 0 10px 10px;
+					padding:
+						5px;
+					background:
+						white;
 				}
 				#post{
+					float:
+						left;
+					margin-left:
+						10px;
 					.post-image{
 						float:
-							left;				
+							left;	
+						margin-top:
+							0px;
+						margin-right:
+							5px;		
 					}
 					.post-details{
 						float:
-							left;
+							right;
 						margin-left:
-							20px;
+							0px;
 						font-size:
 							13px;
+						background:
+							white;
+						color:	
+							#181818;
+						padding:
+							10px 20px;
+						width:
+							240px;
 						h1{
 							padding-top:
 								0px;
@@ -385,6 +413,16 @@ body{
 								0.25em;
 							text-transform:
 								uppercase;
+							margin:
+								0px;
+							color:
+								#181818;
+						}
+						p{
+							margin-left:
+								0px;
+							padding:
+								0px;
 						}
 						.left{
 							color:
@@ -407,7 +445,7 @@ body{
 					  	// background:
      			// 			url("/assets/1x2.png") repeat-x top center;
      					padding:
-     						20px 0 0;	
+     						0px 0 0;	
 						}
 						.back{
 							padding:
@@ -444,6 +482,8 @@ body{
 						left;
 					width:
 						710px;
+					margin-left:
+						10px;
 					// background:
      // 				url("/assets/1x2.png") repeat-x top center;							
      			padding-top:
@@ -491,12 +531,14 @@ body{
      						13px;
      					letter-spacing:
      						0.75px;
-     					// background:
-     					// 	url("/assets/1x2.png") #F2F2F2 repeat-x top center;	
+     					background:
+     						url("/assets/1x2.png") #F2F2F2 repeat-x top center;	
      					float:
      						left;
      					width:
      						202px;
+     					color:
+     						#181818;
      				}
      				.info-comments{
 	     				// background:
@@ -504,11 +546,29 @@ body{
 	     				float:
 	     					left;
 							padding:
-     						8px;	     					
+     						8px;	
+
      				}
 					}
 				}
-				.span-4{
+				.span-12{
+					h1{
+						margin-left:
+							40px;
+						margin-top:	
+							20px;
+						color:
+							#181818;
+					}
+				}
+				.span-10{
+					padding-left:
+						40px;
+					color:
+						#181818;
+				}
+
+				.span-10,.span-4{
 					p{
 						font-size:
 							13px;

@@ -12,26 +12,23 @@
     <%= yield(:head) %>
   </head>
   <body>
-			<header id="top">
-				<div id="logo_container" class="container">
-					<%= link_to(image_tag("logo-black.png", :width => "300", :id=>"flogo"), root_url, :id=>"logo") %>
-					<nav>
+			
+			<%# render :partial =>"shared/breadcrumbs" %>
+
+    <div id="home" class="container">
+			<header id="top"  class="container">
+				<div id="logo_container">
+					<%= link_to(image_tag("logo-white.png", :width => "400", :id=>"flogo"), root_url, :id=>"logo") %>
+		
+				</div>
+					<nav id="main">
 					<%= render_navigation %>
 					<%# render :partial => "shared/side_foot" %>
 					</nav>
-				</div>
-				
 				<%= yield(:social) %>
 			</header>
-    <div id="home" class="container">
-
-			<div id="sidebar" class="span-6">
-				<nav>
-					<%# render_navigation %>
-					<%= render :partial => "shared/side_foot" %>
-				</nav>
-			</div>
-			<section id="main" class="span-17">
+	
+			<section id="main">
 				
 	      <% flash.each do |name, msg| %>
 	        <%= content_tag :div, msg, :id => "flash_#{name}" %>
@@ -39,9 +36,8 @@
 				<%= content_tag :h1, yield(:title) if show_title? %>				
       	<%= yield %>
 			</section>
-			<footer>
+
 			
-			</footer>
     </div>
     <%= yield(:script) %>
     <div id="fb-root"></div>

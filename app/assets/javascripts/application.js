@@ -16,5 +16,5 @@
 //= require validation/validationEngine
 //= require validation/languages/validationEngine-en
 //= require masonry/jquery.masonry.min
-
+//= require backstretch/jquery.backstretch
 //= require customRules.js

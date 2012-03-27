@@ -38,6 +38,7 @@ Skeleton::Application.routes.draw do
   end 
   
   match "/gallery" => "galleries#index", :as => :galleries
+  match "/category/:parent(subcategory/:category(/filter/:subcategory))" => "posts#index",:as =>:post_filtered
   match "/tag/:tag" => "posts#index", :as => :posts
   match "/:name" => "viewer#show", :as => :viewer
   root :to => "viewer#show", :name => "home"

@@ -16,6 +16,7 @@ CMS_logo.png: CMS_logo-188c79fec9207b7b25fd0a934ed4c1b3.png
 CMS_logo_over.png: CMS_logo_over-3d804ab732016e7053fe2c536edda915.png
 LOGO-simple.png: LOGO-simple-892e04d23986c202f0af016428c285c8.png
 logo-black.png: logo-black-ee356f0bf9e577f50f1a5017b2dc3584.png
+logo-white.png: logo-white-f49e69d1ad075419b678126104c47967.png
 logo.png: logo-9de13dcccdc120d979fbee4af2d4143d.png
 rails.png: rails-782b548cc1ba7f898cdad2d9eb8420d2.png
 web-app-theme/avatar.png: web-app-theme/avatar-e4c299a2d4bd06de8ba7dacb6d879d23.png
@@ -23,9 +24,9 @@ web-app-theme/icons/application_edit.png: web-app-theme/icons/application_edit-a
 web-app-theme/icons/cross.png: web-app-theme/icons/cross-c7cecbf2f882d83d76089292bd4b0ddf.png
 web-app-theme/icons/key.png: web-app-theme/icons/key-0f52fededb9874aa079c90e25000a3e4.png
 web-app-theme/icons/tick.png: web-app-theme/icons/tick-64f108801155bd6b82a5471d038f25ea.png
-application.js: application-1338c01de2e6628b83c838cd20c59931.js
-admin.css: admin-7fd7d2110858feedb68563ad16f77cce.css
-application.css: application-5f004832fa99de94b4f50cee56deb785.css
+application.js: application-18eb057f444a9114979fd17c1c9ca543.js
+admin.css: admin-985c73e336d26a59da332b65d3424d07.css
+application.css: application-6922e2ade131d3b07eccf0cca07ea8ba.css
 web-app-theme/themes/default/fonts/museo700-regular-webfont.eot: web-app-theme/themes/default/fonts/museo700-regular-webfont-ec339a8cc12074cc96d25e374aec4bb3.eot
 web-app-theme/themes/default/fonts/museo700-regular-webfont.svg: web-app-theme/themes/default/fonts/museo700-regular-webfont-9d78e69578fc177d07aa9dbd72cb9ee1.svg
 web-app-theme/themes/default/fonts/museo700-regular-webfont.ttf: web-app-theme/themes/default/fonts/museo700-regular-webfont-088236b13b4ce033675298ab50c83156.ttf
@@ -79,6 +80,8 @@ colorbox/ie6/borderTopRight.png: colorbox/ie6/borderTopRight-b133732a05a815d9b9e
 colorbox/loading.gif: colorbox/loading-6a5256e8920a5f11e4c676bbd858ec8b.gif
 colorbox/loading_background.png: colorbox/loading_background-81cbf73ad6666dfab352b7517e9e730e.png
 colorbox/overlay.png: colorbox/overlay-417d79438848643798d38eb52d43eaac.png
+pot-holder.jpg: pot-holder-4a58da02ddd5662a896fdba82c470f69.jpg
+transparent.png: transparent-18a9edd01d3042290df2955dcd35bbf1.png
 blueprint/ie.css: blueprint/ie-99445b8a51303419516e453236269c0e.css
 blueprint/plugins/buttons/icons/cross.png: blueprint/plugins/buttons/icons/cross-c7cecbf2f882d83d76089292bd4b0ddf.png
 blueprint/plugins/buttons/icons/key.png: blueprint/plugins/buttons/icons/key-8e3f74ccdd824651d925f0d4ae82b542.png

@@ -1,9 +1,9 @@
-<div class="grids">
+<div id="postscontainer" class="grids main">
 <h1><%= @page.title %></h1>
 
-<div class="fb-like" data-href="<%= request.url %>" data-send="false" data-width="450" data-show-faces="false"></div>
+<div class="fb-like" data-href="<%= request.url %>" data-send="false" data-show-faces="false" data-colorscheme="light" ></div> 
 <% unless @page.name =="home" %>
-<hr/>
+
 <%=  @page.body.html_safe %>
 <% end %>
 <% if  @page.name =="home" %>
@@ -11,6 +11,7 @@
 			<%= render :partial => @posts %>
 		</div>
 <% end %>
+
 	<% content_for(:script) do %>
 		<script>
 		$(function(){
@@ -28,3 +29,4 @@
 	<% end %>
 
 </div>
+

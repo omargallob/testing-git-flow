@@ -1,0 +1,8 @@
+<div id="breadcrumbs" class="container">
+	<span class="left">
+	<% unless @page and @page.name =="home" %>
+		<%= link_to("Home",root_path)  %>	> 
+	<% end %>
+	<%= render_navigation :renderer => :text %>
+	</span>
+</div>

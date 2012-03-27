@@ -95,7 +95,8 @@ width:100%;
   margin: 5px 0px;
   padding:5px 0;
 	font-size:15px;
-	font-family: "CodeBoldRegular";
+	           font-family:
+              "Pica10BTRoman";  
 }
 .simple_form label.label {
 	margin-bottom:5px;

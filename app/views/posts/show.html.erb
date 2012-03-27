@@ -4,9 +4,10 @@
 			<%= image_tag @post.albums.first.uploads.first.image_url(:large) %>
 
 		</div>
-		<div class="post-details span-7">
+		<div class="post-details span-6">
 			<h1><%= @post.title %></h1>
-			<div class="fb-like" data-href="http://ragboneman.com/" data-send="false" data-width="210" data-show-faces="false"></div>
+			<div class="fb-like" data-href="<%= request.url %>" data-send="false" data-show-faces="false" data-colorscheme="dark" data-width="200" ></div> 
+			<hr>
 			<div class="post-info-view">
 				<p><%= @post.body %></p>
 			</div>
@@ -19,5 +20,5 @@
 		</div>
 		
 	</div>
-	<div class="fb-comments" data-href="http://www.ragboneman.com" data-num-posts="2" data-width="620" style="float:left;"></div>
+	<div class="fb-comments" data-href="<%= request.url %>" data-num-posts="2" data-width="610"  data-colorscheme="light"  style="float:left;"></div>
 </div>

@@ -35,7 +35,9 @@
 				<%= content_tag :h1, yield(:title) if show_title? %>				
       	<%= yield %>
 			</section>
-			
+			<footer>
+        <%= render :partial => "shared/footer" %>
+      </footer>
     </div>
 
     <%= yield(:script) %>

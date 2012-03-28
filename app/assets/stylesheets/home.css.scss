@@ -65,6 +65,7 @@ body{
 			white;
 		margin:
 			50px auto;	
+
 		header#top{		
 			margin:
 				0px 0 15px 0;		
@@ -296,6 +297,12 @@ body{
 					padding-top:
 						20px;
 				}
+				#posts,#gallery_holder{
+					width:
+						950px;
+					margin:
+						0px;
+				}
 			}
 			.grids{
 				float:
@@ -304,7 +311,7 @@ body{
 					930px;
 
 				margin:
-					0px 10px 10px 10px;
+					0px 10px 0px 10px;
 
 				color:	
 					#181818;	
@@ -498,10 +505,6 @@ body{
 				#gallery_holder,#posts{
 					float:
 						left;
-					width:
-						710px;
-					margin-left:
-						10px;
 					// background:
      // 				url("/assets/1x2.png") repeat-x top center;							
      			padding-top:
@@ -615,23 +618,25 @@ body{
 		}
 		footer{
 			padding:
-				0px 5px 0px 0;
-			margin-bottom:
-				15px;
+				0;
+			margin:
+				10px;
 			width:
-				940px;
+				930px;
 			float:
 				left;
-			margin-top:
-				0px;
+			color:
+				#181818;			
+
+			background:
+				white;
 			//@include border-radius(10px, 10px);	
-			span.right{
-				float:
-					right;
-				margin-right:
-					10px;
-				padding-bottom:
-					15px;
+			span{
+				
+				padding:
+					4px 10px;
+				font-family:
+					"Pica10BTRoman";	
 			}						
 			a{
 				color:

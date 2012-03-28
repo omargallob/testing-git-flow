@@ -1,8 +1,9 @@
-<div class="grids">
-<h1><%= "Gallery > "+@album.title %></h1>
+<div id="postscontainer" class="grids main">
+    <div id="top-header">
+        <h1><%= "Gallery > "+@album.title %></h1>
 
-    <div class="fb-like" data-href="<%= gallery_url(@album) %>" data-send="false" data-width="450" data-show-faces="false"></div>
-
+        <div class="fb-like" data-href="<%= gallery_url(@album) %>" data-send="false" data-width="450" data-show-faces="false"></div>
+    </div>
     <div id="gallery_holder" class="holder">
         <%= render :partial => "upload", :collection => @album.uploads.delete_if{|x|x.blank?} %>  
     </div>
